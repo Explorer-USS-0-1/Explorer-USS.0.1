@@ -1,2 +1,2 @@
 # IoT-project
-Here we can put what ever we make.
+Here we can put whatever we make.
