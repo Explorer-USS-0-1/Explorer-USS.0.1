@@ -1,16 +1,21 @@
-/*
-  Rui Santos & Sara Santos - Random Nerd Tutorials
-  Complete project details at https://RandomNerdTutorials.com/esp-now-two-way-communication-esp32/
-  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files.
-  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 #include <esp_now.h>
 #include <WiFi.h>
+#include <ezButton.h>
+
+#define VRX_PIN  34 // Arduino pin connected to VRX pin
+#define VRY_PIN  35 // Arduino pin connected to VRY pin
+#define SW_PIN 33 //Arduino pin connected so SW
+
+ezButton button(SW_PIN);
+
 // REPLACE WITH THE MAC Address of your receiver 
 uint8_t broadcastAddress[] = { 0xcc , 0xdb , 0xa7 , 0x34 , 0x29 , 0x14};
 
 // Variable to store if sending data was successful
 String success;
+String dir;
+int xValue = 0; // To store value of the X axis
+int yValue = 0; // To store value of the Y axis
 
 esp_now_peer_info_t peerInfo;
 
@@ -23,9 +28,9 @@ void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
 void setup() {
   // Init Serial Monitor
   Serial.begin(115200);
- 
   // Set device as a Wi-Fi Station
   WiFi.mode(WIFI_STA);
+  button.setDebounceTime(50);
 
   // Init ESP-NOW
   if (esp_now_init() != ESP_OK) {
@@ -48,21 +53,41 @@ void setup() {
     return;
   }
 }
-typedef struct message {
-  String string;
-}message;-
+typedef struct myData {
+  String dir;
+} myData;
 
-message hi;
+// Create a struct_message called myData
+int buton;
+myData mydata;
  
 void loop() {
-  hi.string="hello";
-  esp_err_t result = esp_now_send(broadcastAddress, (uint8_t *) &hi, sizeof(hi));
-   
+
+  button.loop();
+  xValue = analogRead(VRX_PIN);
+  yValue = analogRead(VRY_PIN);
+  buton = digitalRead(SW_PIN);
+
+  // Set values to send
+  if (xValue<=1500){
+    dir="left";
+  }
+  if (xValue>=2100){
+    dir="right";
+  }
+  if (buton==0){
+    dir="center";
+  }
+
+  mydata.dir = dir;
+
+  esp_err_t result = esp_now_send(broadcastAddress, (uint8_t *) &mydata, sizeof(mydata));
+
   if (result == ESP_OK) {
     Serial.println("Sent with success");
   }
   else {
     Serial.println("Error sending the data");
   }
-   delay(5000);
+  delay(10);
 }
