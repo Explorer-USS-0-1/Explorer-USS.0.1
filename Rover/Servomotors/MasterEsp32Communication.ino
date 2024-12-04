@@ -13,7 +13,8 @@ uint8_t broadcastAddress[] = { 0xcc , 0xdb , 0xa7 , 0x34 , 0x29 , 0x14};
 
 // Variable to store if sending data was successful
 String success;
-String dir;
+String dirX;
+String dirY;
 int xValue = 0; // To store value of the X axis
 int yValue = 0; // To store value of the Y axis
 
@@ -54,7 +55,8 @@ void setup() {
   }
 }
 typedef struct myData {
-  String dir;
+  String dirX;
+  String dirY;
 } myData;
 
 // Create a struct_message called myData
@@ -70,16 +72,24 @@ void loop() {
 
   // Set values to send
   if (xValue<=1500){
-    dir="left";
+    dirX="left";
   }
   if (xValue>=2100){
-    dir="right";
+    dirX="right";
+  }
+  if (yValue<=1800){
+    dirY="up";
+  }
+  if(yValue>=2500){
+    dirY="down";
   }
   if (buton==0){
-    dir="center";
+    dirY="center";
+    dirX="center";
   }
 
-  mydata.dir = dir;
+  mydata.dirX = dirX;
+  mydata.dirY = dirY;
 
   esp_err_t result = esp_now_send(broadcastAddress, (uint8_t *) &mydata, sizeof(mydata));
 
