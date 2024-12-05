@@ -49,7 +49,7 @@ void setup() {
   // Initialize Serial Monitor
   Serial.begin(115200);
   servoX.attach(13);
-  servoY.attach(12);
+  servoY.attach(32);
   servoX.write(posX);
   servoY.write(posY);
   // Set device as a Wi-Fi Station
