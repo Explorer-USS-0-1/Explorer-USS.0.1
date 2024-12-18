@@ -89,7 +89,7 @@ void OnDataRecv(const uint8_t * mac, const uint8_t *incomingData, int len) {
   }
 }
 
-void leftforward(){
+void rightforward(){
   digitalWrite(motor1pin1,HIGH);
   digitalWrite(motor1pin2,LOW);
 
@@ -97,7 +97,7 @@ void leftforward(){
   digitalWrite(motor2pin2,LOW);
 }
 
-void rightforward(){
+void leftforward(){
   digitalWrite(motor3pin1,LOW);
   digitalWrite(motor3pin2,HIGH);
   
@@ -105,7 +105,7 @@ void rightforward(){
   digitalWrite(motor4pin2,HIGH);
 }
 
-void rightbackwards(){
+void leftbackwards(){
   digitalWrite(motor1pin1,LOW);
   digitalWrite(motor1pin2,HIGH);
 
@@ -113,7 +113,7 @@ void rightbackwards(){
   digitalWrite(motor2pin2,HIGH);
 }
 
-void leftbackwards(){
+void rightbackwards(){
   digitalWrite(motor3pin1,HIGH);
   digitalWrite(motor3pin2,LOW);
 
@@ -121,7 +121,7 @@ void leftbackwards(){
   digitalWrite(motor4pin2,LOW);
 }
 
-void leftstop(){
+void rightstop(){
   digitalWrite(motor1pin1,LOW);
   digitalWrite(motor1pin2,LOW);
 
@@ -129,7 +129,7 @@ void leftstop(){
   digitalWrite(motor2pin2,LOW);
 }
 
-void rightstop(){
+void leftstop(){
   digitalWrite(motor3pin1,LOW);
   digitalWrite(motor3pin2,LOW);
 
