@@ -28,11 +28,15 @@ To build and use this project, you need the following hardware:
 - A 12 volt 1.5 Amp powersource (for the motor controller board)
 - 2x 5 volt powersource (1 for the Esp-Cam, 1 for the Servomotors)
   - If you want, you can use a voltage step down board (we did this due to time and budget costrains)
-- 2x rover track outer frame
-- 2x rover track inner frame
-- 2x full rover tracks
-- 6x cog
-- Rover base frame
+ 
+  
+ 
+**THIS PART IS ABOUT THE CHASSIS AND TOOLS OF THE ROVER (All 3D printed and redesigned from the original ones)**
+- 2x [rover track outer frame](https://github.com/Dennis-Alberti/IoT-project/blob/main/Rover_chassis_and_tools_printfiles/ProtoTank_TrackOuterFrame.stl)
+- 2x [rover track inner frame](https://github.com/Dennis-Alberti/IoT-project/blob/main/Rover_chassis_and_tools_printfiles/ProtoTank_trackinnerFrame.stl)
+- 2x [full rover tracks](https://github.com/Dennis-Alberti/IoT-project/blob/main/Rover_chassis_and_tools_printfiles/track_1_5.stl)
+- 6x [cog](https://github.com/Dennis-Alberti/IoT-project/blob/main/Rover_chassis_and_tools_printfiles/ProtoTank_Cog.stl)
+- [Rover base frame]
 - 2x L298N driver holder
 - Rover floor frame
 - Base for camera structure
