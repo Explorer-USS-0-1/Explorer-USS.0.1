@@ -12,7 +12,7 @@ This project tries to create and learn how a exploration rover can be, how can b
 
 Because we couldn't see it everywhere, we gave to the rover an eye (a camera), so we can see what it sees.
 
-Maybe is not a professional rover, or a competitive one, but for sure with a very limited budget and almost 0 knowledge, we made something very nice and learned a lot of useful things.
+Maybe is not a professional rover, or a competitive one, but for sure with a very limited budget and almost zero starting knowledge, we learned a lot about embedded software and IOT.
 
 >[!Note]
 >
