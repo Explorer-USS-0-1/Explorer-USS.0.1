@@ -149,7 +149,7 @@ void leftstop(){
 }
 
 void setup() {
-  // put your setup code here, to run once:
+  //these are the pin settings for the DC motors
   pinMode(motor1pin1, OUTPUT);
   pinMode(motor1pin2, OUTPUT);
   pinMode(motor2pin1, OUTPUT);
@@ -158,7 +158,7 @@ void setup() {
   pinMode(motor3pin2, OUTPUT);
   pinMode(motor4pin1, OUTPUT);
   pinMode(motor4pin2, OUTPUT);
-
+  
   pinMode(MOTOR1_SPEED, OUTPUT);
   pinMode(MOTOR2_SPEED, OUTPUT);
   pinMode(MOTOR3_SPEED, OUTPUT);
@@ -171,6 +171,7 @@ void setup() {
   analogWrite(MOTOR3_SPEED,200);
   analogWrite(MOTOR4_SPEED,200);
 
+  //These are the pin settings for the servomotors
   servoX.attach(13);
   servoY.attach(32);
   servoX.write(87);
@@ -178,6 +179,7 @@ void setup() {
 
   WiFi.mode(WIFI_STA);
 
+  //Here we initialize the ESP-NOW protocol
   if (esp_now_init() != ESP_OK) {
     Serial.println("Error initializing ESP-NOW");
     return;
