@@ -71,7 +71,7 @@ This setup ensures efficient and reliable communication between the MSP432 and E
 
 ## PIN LAYOUT
 
-### Table 1: ESP32 Connected to MSP432
+# Table 1: ESP32 connected to MSP432
 | **ESP32 Pin** | **MSP432 Pin** |   
 |---------------|----------------|
 | GPIO16 (RX)   | P3.3 (TX)      | 
@@ -80,7 +80,7 @@ This setup ensures efficient and reliable communication between the MSP432 and E
 | VIN           | 5V             | 
 
 
-### Tabela de Conexões do ESP32
+# Table 2: ESP32 connected to DC motors and servo motors
 | **ESP32 Pin** | **DC motors**       | **Servo motors** | **Distribuition power** |
 |---------------|---------------------|------------------|-------------------------|
 | 21            | Motor1 Pin1         | -                | -                       |
@@ -99,7 +99,7 @@ This setup ensures efficient and reliable communication between the MSP432 and E
 | 32            | -                   | servoY (Signal)  | -                       |
 | GND           | -                   | -                | GND                     |
 | VIN           | -                   | -                | 5V                      |
-| -             | Motors Power        | -                | 12V                     |
+| -             | Power               | -                | 12V                     |
 | -             | GND                 | -                | GND                     |
 | -             | -                   | Power            | 9V                      |
 | -             | -                   | GND              | GND                     |
