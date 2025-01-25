@@ -60,7 +60,7 @@ To build and use this project, you need the following hardware:
 
 This project is divided into two modules: the **controller** and the **rover**. These modules are connected via Wi-Fi using two ESP32 microcontrollers. All the information originates from the MSP432 microcontroller, which sends it to **ESP1**. ESP1 then transmits the data to **ESP2**, which interprets the messages and sends instructions to the DC motors and servo motors on the rover.
 
-To establish communication between the MSP432 and ESP1, we had three options: **I2C**, **UART**, and **SPI**. We chose **UART** because it requires fewer pins and is simpler to implement. Due to the pin layout of the MSP432, we are limited to using UART module **A2**, with pins **3.2 (Rx)** and **3.3 (Tx)**. 
+To establish communication between the MSP432 and ESP1, we had three options: **I2C**, **UART**, and **SPI**. We chose **UART** because it requires fewer pins and is simpler to implement. Due to the pin layout of the MSP432, we are limited to using UART module **A2**, with pins **3.2 (Rx)** and **3.3 (Tx)**, connected to pins **16 (Rx)** and **17 (TX)** and **16 (Rx)** respectively. 
 
 The UART is configured to use the **SMCLK (Sub-Main Clock)** for the following reasons:
 1. We are using a low baud rate of **9600**, which does not require a high-frequency clock.
