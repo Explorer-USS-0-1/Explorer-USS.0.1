@@ -56,7 +56,7 @@ To build and use this project, you need the following hardware:
 >
 >The rover is designed to be customizable, our project is just an example.
 
-**COMMUNICATION**
+## COMMUNICATION
 
 This project is divided into two modules: the **controller** and the **rover**. These modules are connected via Wi-Fi using two ESP32 microcontrollers. All the information originates from the MSP432 microcontroller, which sends it to **ESP1**. ESP1 then transmits the data to **ESP2**, which interprets the messages and sends instructions to the DC motors and servo motors on the rover.
 
