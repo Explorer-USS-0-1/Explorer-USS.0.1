@@ -79,6 +79,31 @@ This setup ensures efficient and reliable communication between the MSP432 and E
 | GND           | GND            |
 | VIN           | 5V             | 
 
+
+### Tabela de Conexões do ESP32
+| **ESP32 Pin** | **DC motors**       | **Servo motors** | **Distribuition power** |
+|---------------|---------------------|------------------|-------------------------|
+| 21            | Motor1 Pin1         | -                | -                       |
+| 33            | Motor1 Pin2         | -                | -                       |
+| 16            | Motor2 Pin1         | -                | -                       |
+| 17            | Motor2 Pin2         | -                | -                       |
+| 18            | Motor3 Pin1         | -                | -                       |
+| 19            | Motor3 Pin2         | -                | -                       |
+| 22            | Motor4 Pin1         | -                | -                       |
+| 23            | Motor4 Pin2         | -                | -                       |
+| 27            | Motor1 SPEED        | -                | -                       |
+| 26            | MOTOR2 SPEED        | -                | -                       |
+| 14            | MOTOR3 SPEED        | -                | -                       |
+| 25            | MOTOR4 SPEED        | -                | -                       |
+| 13            | -                   | servoX (Signal)  | -                       |
+| 32            | -                   | servoY (Signal)  | -                       |
+| GND           | -                   | -                | GND                     |
+| VIN           | -                   | -                | 5V                      |
+| -             | Motors Power        | -                | 12V                     |
+| -             | GND                 | -                | GND                     |
+| -             | -                   | Power            | 9V                      |
+| -             | -                   | GND              | GND                     |
+
 #### Software
 - [Code Composer Studio](https://www.ti.com/tool/CCSTUDIO) Integrated Development Environment (IDE)
 - [MSP432 DriverLib](https://www.ti.com/tool/download/SIMPLELINK-MSP432-SDK/3.40.01.02)
