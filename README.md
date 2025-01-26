@@ -52,6 +52,11 @@ To build and use this project, you need the following hardware:
 - 1 Usb-C cable
 - PLA of two different colors ( one for tracks, one for everything else)
 
+#### Software
+- [Code Composer Studio](https://www.ti.com/tool/CCSTUDIO) Integrated Development Environment (IDE)
+- [MSP432 DriverLib](https://www.ti.com/tool/download/SIMPLELINK-MSP432-SDK/3.40.01.02)
+- Arduino IDE
+
 >[!IMPORTANT]
 >
 >The rover is designed to be customizable, our project is just an example.
@@ -104,8 +109,4 @@ This setup ensures efficient and reliable communication between the MSP432 and E
 | -             | -                   | Power            | 9V                      |
 | -             | -                   | GND              | GND                     |
 
-#### Software
-- [Code Composer Studio](https://www.ti.com/tool/CCSTUDIO) Integrated Development Environment (IDE)
-- [MSP432 DriverLib](https://www.ti.com/tool/download/SIMPLELINK-MSP432-SDK/3.40.01.02)
-- Arduino IDE
 
