@@ -104,9 +104,9 @@ This setup ensures efficient and reliable communication between the MSP432 and E
 | 32            | -                   | servoY (Signal)  | -                       |
 | GND           | -                   | -                | GND                     |
 | VIN           | -                   | -                | 5V                      |
-| -             | Power               | -                | 12V                     |
+| -             | Power               | -                | 12V - 1.5A              |
 | -             | GND                 | -                | GND                     |
-| -             | -                   | Power            | 9V                      |
+| -             | -                   | Power            | 5V                      |
 | -             | -                   | GND              | GND                     |
 
 
