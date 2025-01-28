@@ -1,3 +1,4 @@
+
 #include <ti/devices/msp432p4xx/inc/msp.h>
 #include <ti/devices/msp432p4xx/driverlib/driverlib.h>
 #include <ti/grlib/grlib.h>
@@ -60,6 +61,9 @@ void fn_IMAGE() {
 
 // MAIN FUNCTION ---------------------------------------------------------------------------------------------
 
+int8_t *x = (int8_t *)"Neutral ";
+int8_t *y = (int8_t *)"Neutral ";
+
 /* MAIN FUNCTION  */
 void main(void) {
     WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD; // Stop the watchdog
@@ -97,10 +101,14 @@ void main(void) {
 
             case 1: // Tank mode
 
+
+                Graphics_drawStringCentered(&g_sContext, x ,AUTO_STRING_LENGTH,40,80,OPAQUE_TEXT);
+                Graphics_drawStringCentered(&g_sContext, y ,AUTO_STRING_LENGTH,88,80,OPAQUE_TEXT);
+
                 if(resultsBuffer[0] < THRESHOLD_HIGH - 2000 && resultsBuffer[0] > THRESHOLD_LOW + 2000 && resultsBuffer[1] < THRESHOLD_HIGH - 2000 && resultsBuffer[1] > THRESHOLD_LOW + 2000 )
                 {
                     Graphics_drawStringCentered(&g_sContext, (int8_t *)"Stationary",AUTO_STRING_LENGTH,64,40,OPAQUE_TEXT);
-                    Graphics_drawStringCentered(&g_sContext, (int8_t *)"  Neutral ",AUTO_STRING_LENGTH,64,70,OPAQUE_TEXT);
+                    //Graphics_drawStringCentered(&g_sContext, x ,AUTO_STRING_LENGTH,64,70,OPAQUE_TEXT);
                 }
 
                 // **Button2 Toggle (Top button)**
@@ -115,6 +123,8 @@ void main(void) {
                 Graphics_drawStringCentered(&g_sContext,(int8_t *)string,AUTO_STRING_LENGTH,64,100,OPAQUE_TEXT);
                 Graphics_drawStringCentered(&g_sContext, (int8_t *)"Tank movement: ",AUTO_STRING_LENGTH,64,30,OPAQUE_TEXT);
                 Graphics_drawStringCentered(&g_sContext, (int8_t *)"Camera movement: ",AUTO_STRING_LENGTH,64,60,OPAQUE_TEXT);
+                Graphics_drawStringCentered(&g_sContext, (int8_t *)"Y: ",AUTO_STRING_LENGTH,40,70,OPAQUE_TEXT);
+                Graphics_drawStringCentered(&g_sContext, (int8_t *)"X: ",AUTO_STRING_LENGTH,88,70,OPAQUE_TEXT);
                 //tank movement
                 if (button2Toggle==0) {
                     if ((resultsBuffer[1] < THRESHOLD_HIGH) && (resultsBuffer[1] > THRESHOLD_LOW+1000) &&
@@ -143,7 +153,7 @@ void main(void) {
                     } else if (resultsBuffer[0] < 1000 + THRESHOLD_LOW) {
                     // If value x is less than 2000 car moves to the left
                     //printf("Tank Left\n");
-                        Graphics_drawStringCentered(&g_sContext,(int8_t *)"  Left    ",AUTO_STRING_LENGTH,64,40,OPAQUE_TEXT);
+                        Graphics_drawStringCentered(&g_sContext,(int8_t *)"   Left   ",AUTO_STRING_LENGTH,64,40,OPAQUE_TEXT);
                         sendOnceTank(WriteLeft);
                     }
                 }
@@ -153,6 +163,8 @@ void main(void) {
                     if (!(P4IN & GPIO_PIN1)){
                     // While button is being pressed the message Default camera will show on screen
                         Graphics_drawStringCentered(&g_sContext, (int8_t *)"Default Camera", AUTO_STRING_LENGTH, 64, 110, OPAQUE_TEXT);
+                        x = (int8_t *)"Neutral ";
+                        y = (int8_t *)"Neutral ";
                         sendOnceCamera(WriteMiddle);
                     }
                     if (P4IN & GPIO_PIN1){
@@ -161,23 +173,26 @@ void main(void) {
                     if (resultsBuffer[1] > THRESHOLD_HIGH) {
                     // Servo motor goes up
                     //printf("Camera up\n");
-                        Graphics_drawStringCentered(&g_sContext,(int8_t *)"  Upward  ",AUTO_STRING_LENGTH,64,70,OPAQUE_TEXT);
+                        x = (int8_t *)"   Up   ";
                         sendOnceCamera(WriteUp);
                     } else if (resultsBuffer[1] < THRESHOLD_LOW) {
                     // Servo motor goes down
                     //printf("Camera down\n");
-                        Graphics_drawStringCentered(&g_sContext,(int8_t *)" Downward ",AUTO_STRING_LENGTH,64,70,OPAQUE_TEXT);
+                        //Graphics_drawStringCentered(&g_sContext,(int8_t *)" Downward ",AUTO_STRING_LENGTH,64,70,OPAQUE_TEXT);
+                        x = (int8_t *)"  Down  ";
                         sendOnceCamera(WriteDown);
                     }
                     if (resultsBuffer[0] > THRESHOLD_HIGH) {
                     // Servo motor turns right
                     //printf("Camera right\n");
-                        Graphics_drawStringCentered(&g_sContext,(int8_t *)"   Right  ",AUTO_STRING_LENGTH,64,70, OPAQUE_TEXT);
+                        //Graphics_drawStringCentered(&g_sContext,(int8_t *)"   Right  ",AUTO_STRING_LENGTH,64,70, OPAQUE_TEXT);
+                        y = (int8_t *)"  Right ";
                         sendOnceCamera(WriteCright);
                     } else if (resultsBuffer[0] < 1000 + THRESHOLD_LOW) {
                     // Servo motor turns left
                     //printf("Camera left\n");
-                        Graphics_drawStringCentered(&g_sContext, (int8_t *)"   Left   ", AUTO_STRING_LENGTH, 64, 70, OPAQUE_TEXT);
+                        //Graphics_drawStringCentered(&g_sContext, (int8_t *)"   Left   ", AUTO_STRING_LENGTH, 64, 70, OPAQUE_TEXT);
+                        y = (int8_t *)"  Left  ";
                         sendOnceCamera(WriteCleft);
 
                     }
@@ -201,7 +216,3 @@ void main(void) {
             }
 
     }
-
-
-
-
