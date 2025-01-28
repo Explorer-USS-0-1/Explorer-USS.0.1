@@ -114,3 +114,4 @@ This setup ensures efficient and reliable communication between the MSP432 and E
 | -             | -                   | GND              | GND                     |
 
 
+The ESP32-CAM is directly powered by an independet powerbank.
