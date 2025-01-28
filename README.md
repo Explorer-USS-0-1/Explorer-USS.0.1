@@ -128,9 +128,9 @@ This are the steps to follow to correctly use the DriverLib for the Educational 
 2. Open CSS and left click on Project Folder to select Properties
 3. Select CSS Build
 4. Click ARM Compiler and then Include Options
-4.1 Add "simplelink_msp432p4_sdk_3_40_01_02/source" directory to "Add dir to #include search path" window.  
-5. Click ARM Linker and File Search Path
-5.1 Add "simplelink_msp432p4_sdk_3_40_01_02/source/ti/devices/msp432p4xx/driverlib/ccs/msp432p4xx_driverlib.lib" to "Include library file..." window
+5. Add "simplelink_msp432p4_sdk_3_40_01_02/source" directory to "Add dir to #include search path" window.  
+6. Click ARM Linker and File Search Path
+7. Add "simplelink_msp432p4_sdk_3_40_01_02/source/ti/devices/msp432p4xx/driverlib/ccs/msp432p4xx_driverlib.lib" to "Include library file..." window
 
 What the code do?
 The code put in action the rover. In the code we have a machine state that pop up when we power up the board, it shows a white car and the frase "Welcome Back !" than when if we
