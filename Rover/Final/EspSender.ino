@@ -1,9 +1,10 @@
 #include <esp_now.h>
 #include <WiFi.h>
 
-//uint8_t broadcastAddress[] = { 0xcc , 0xdb , 0xa7 , 0x3f , 0x6a , 0xc4};
+//uint8_t broadcastAddress[] = { 0xcc , 0xdb , 0xa7 , 0x3f , 0x6a , 0xc4}; Ip address of the reciever esp, in case we want to change the esp's position
 uint8_t broadcastAddress[] = { 0xcc , 0xdb , 0xa7 , 0x34 , 0x29 , 0x14};
-esp_now_peer_info_t peerInfo;
+esp_now_peer_info_t peerInfo; //Saves the 
+
 
 void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
   Serial.print("\r\nLast Packet Send Status:\t");
@@ -13,20 +14,20 @@ void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
 void setup() {
   Serial.begin(115200);
   WiFi.mode(WIFI_STA);
-  Serial1.begin(9600, SERIAL_8N1, 16, 17); // Configura Serial1
+  Serial1.begin(9600, SERIAL_8N1, 16, 17); // opens a serial connection (BAUD RATE, RX, TX) 
 
-  //Init ESP_now
+  //Initialize ESP_now
   if (esp_now_init() != ESP_OK) {
     Serial.println("Error initializing ESP-NOW");
     return;
   }
   esp_now_register_send_cb(OnDataSent);
 
-  memcpy(peerInfo.peer_addr, broadcastAddress, 6);
+  memcpy(peerInfo.peer_addr, broadcastAddress, 6); //Saves and register the destination IP
   peerInfo.channel = 0;  
   peerInfo.encrypt = false;
 
-//Add the peer 
+//Add the peer info
   if (esp_now_add_peer(&peerInfo) != ESP_OK){
     Serial.println("Failed to add peer");
     return;
@@ -47,26 +48,31 @@ int bufferIndex = 0;
 char recievedChar;
 
 void loop() {
-  while (Serial1.available()) {
-    recievedChar = Serial1.read();  // Lê o próximo caractere
-    recievedString[bufferIndex] = recievedChar;
+  //Loop to read 6 chars and tranform them into a string
+  while (Serial1.available()) { //If there is something to read in Serial1
+    recievedChar = Serial1.read();  // read a char from Serial1
+    recievedString[bufferIndex] = recievedChar; //add to the String array
     bufferIndex++;
-    // Verifica se o buffer atingiu o tamanho máximo ou se o caractere recebido é o delimitador de fim de string (opcional)
+    // Verify if we are at the maximum length
     if (bufferIndex >= BUFFER_SIZE - 1) {
-      recievedString[bufferIndex] = '\0';  // Adiciona o caractere nulo para terminar a string
-      bufferIndex = 0;  // Reseta o índice do buffer para a próxima leitura
+      recievedString[bufferIndex] = '\0';  // Adds the null char to finish the String
+      bufferIndex = 0;  
     }
   }
-  //if recieved
-  //Serial.println(recievedString);
-  mydata.mensage = recievedString;
-  //Serial.println(mydata.mensage);
+
+  
+  mydata.mensage = recievedString; //Saves the recieved string into the sending structure
+
+  //Send the data and saves the output in "result"
   esp_err_t result = esp_now_send(broadcastAddress, (uint8_t *) &mydata, sizeof(mydata));
-  if (result == ESP_OK) {
-    //Serial.println("Sent with success");
-  }
-  else {
-    Serial.println("Error sending the data");
-  }
+
+  //While testing we use this structure to avaluate if the data is being correctly sent
+  //if (result == ESP_OK) {
+  //  Serial.println("Sent with success");
+  //}
+  //else {
+  //  Serial.println("Error sending the data");
+  //}
+}
  
 }
