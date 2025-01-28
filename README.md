@@ -78,7 +78,7 @@ The UART is configured to use the **SMCLK (Sub-Main Clock)** for the following r
 
 This setup ensures efficient and reliable communication between the MSP432 and ESP1 while optimizing power consumption and resource allocation.
 
-## PIN LAYOUT
+### PIN LAYOUT
 
  Table 1: ESP32 connected to MSP432
 | **ESP32 Pin** | **MSP432 Pin** |   
@@ -117,7 +117,7 @@ This setup ensures efficient and reliable communication between the MSP432 and E
 The ESP32-CAM is directly powered by an independet powerbank.
 
 
-#### Software reproducibility
+## SOFTWARE REPRODUCIBILITY
 
 The MSP432 code is written in C and the porpose of it is to send the action that we entended the rover to make.
 First thing first is to set up the IDE were we want to test our code, for this purpose we use Code Composer and to do it we have to download it from [Code Composer Studio](https://www.ti.com/tool/CCSTUDIO) Integrated Development Environment (IDE), create a new project, select our board in the selection tab and give a name to the project.
@@ -137,7 +137,7 @@ The code put in action the rover. In the code we have a machine state that pop u
 want to start move the tank we have to press the S3 button (position right/bottom) of the controller, that will shows the state of the rover and will enable the movement. At this point is necessary only to move the joistick to make the rover move or press the S2 button (position right/top) of the controller to switch mode and make the camera move with the joistick.
 All this is possible thanks to the handler, that will listen for the interrupt of an action at any moment. 
 
-## PIN LAYOUT
+### PIN LAYOUT
 
  Table 3: MSP432 Pins Axis Joystick with Push Buttons
 | **Pin Functions**  | **MSP432 Pin** |   
