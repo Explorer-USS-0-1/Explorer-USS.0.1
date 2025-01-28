@@ -4,9 +4,10 @@
 #include "LcdDriver/Crystalfontz128x128_ST7735.h"
 #include <stdio.h>
 #include <string.h>
-#include <stdbool.h>
+#include <stdbool.h>  //ATTENTION *******************************
 #include "msp.h"
 
+//Thresholds for tank and camera positions
 #define THRESHOLD_HIGH 12000
 #define THRESHOLD_LOW 1000
 
@@ -74,7 +75,7 @@ void _adcInit() {
 }
 
 void _hwInit(){
-
+    //P4.1 is utilized for button 3 (bottom button)
     GPIO_setAsInputPinWithPullUpResistor(GPIO_PORT_P4, GPIO_PIN1);
     //Halting WDT and disabling master interrupts
     WDT_A_holdTimer();
@@ -100,7 +101,7 @@ void _hwInit(){
 
 //--------------------------------------------------------------------------------------------
 
-// Function to draw a car
+// Function to draw a basic car
 void drawCar() {
     //Graphics_clearDisplay(&g_sContext);
     Graphics_drawRectangle(&g_sContext, &(Graphics_Rectangle){20, 50, 100, 70}); // Car body
@@ -109,6 +110,7 @@ void drawCar() {
     Graphics_drawLine(&g_sContext, 80, 30, 100, 50); // Right slanted line
     Graphics_drawCircle(&g_sContext, 35, 75, 10);  // Left wheel
     Graphics_drawCircle(&g_sContext, 85, 75, 10);  // Right wheel
+    //Draw message on screen
     Graphics_drawStringCentered(&g_sContext, (int8_t *)"Welcome back!", AUTO_STRING_LENGTH, 64, 110, OPAQUE_TEXT);
 }
 
@@ -120,7 +122,7 @@ void fn_IMAGE() {
         Graphics_setForegroundColor(&g_sContext, GRAPHICS_COLOR_WHITE);
 
         drawCar();
-        //event = SW_NONE;
+        //event = SW_NONE; //ATTENTION *****************************
     }
 
 
@@ -149,7 +151,9 @@ void main(void) {
             if (status & ADC_INT1)
             {
                 // Store ADC results
+                //x values
                 resultsBuffer[0] = ADC14_getResult(ADC_MEM0);
+                //y values
                 resultsBuffer[1] = ADC14_getResult(ADC_MEM1);
 
                 char string[10];
@@ -165,6 +169,7 @@ void main(void) {
 
                 if(resultsBuffer[0] < THRESHOLD_HIGH - 2000 && resultsBuffer[0] > THRESHOLD_LOW + 2000 && resultsBuffer[1] < THRESHOLD_HIGH - 2000 && resultsBuffer[1] > THRESHOLD_LOW + 2000 )
                 {
+                    //If x and y values are between the set thresholds they are in the standard position
                     Graphics_drawStringCentered(&g_sContext, (int8_t *)"Stationary",AUTO_STRING_LENGTH,64,40,OPAQUE_TEXT);
                     Graphics_drawStringCentered(&g_sContext, (int8_t *)"  Neutral ",AUTO_STRING_LENGTH,64,70,OPAQUE_TEXT);
                 }
@@ -184,21 +189,21 @@ void main(void) {
                 if (button2Toggle==0) {
                     if (resultsBuffer[1] > THRESHOLD_HIGH) {
                     // If value y is greater than 12000 car moves forward
-                    //printf("Tank Forwards\n");
+                    
                         Graphics_drawStringCentered(&g_sContext,(int8_t *)"  Forward ",AUTO_STRING_LENGTH,64,40,OPAQUE_TEXT);
                     } else if (resultsBuffer[1] < THRESHOLD_LOW) {
                     // If value y is less than 1000 car moves backwards
-                    //printf("Tank Backwards\n");
+                    
                         Graphics_drawStringCentered(&g_sContext,(int8_t *)" Backward ",AUTO_STRING_LENGTH,64,40,OPAQUE_TEXT);
                     }
                     if (resultsBuffer[0] > THRESHOLD_HIGH) {
                     // If value x is greater than 12000 car moves to the right
-                    //printf("Tank Right\n");
+                    
                         Graphics_drawStringCentered(&g_sContext,(int8_t *)"  Right   ",AUTO_STRING_LENGTH,64,40,OPAQUE_TEXT);
                     // Adding 1000 because the joystick at x = 1000 is almost at its limit position
                     } else if (resultsBuffer[0] < 1000 + THRESHOLD_LOW) {
                     // If value x is less than 2000 car moves to the left
-                    //printf("Tank Left\n");
+                    
                         Graphics_drawStringCentered(&g_sContext,(int8_t *)"  Left    ",AUTO_STRING_LENGTH,64,40,OPAQUE_TEXT);
                     }
                 }
@@ -209,37 +214,38 @@ void main(void) {
                     // While button is being pressed the message Default camera will show on screen
                         Graphics_drawStringCentered(&g_sContext, (int8_t *)"Default Camera", AUTO_STRING_LENGTH, 64, 110, OPAQUE_TEXT);
                     }
+                    //If the button is not being pressed, no message is on screen
                     if (P4IN & GPIO_PIN1){
                         Graphics_drawStringCentered(&g_sContext, (int8_t *)"              ", AUTO_STRING_LENGTH, 64, 110, OPAQUE_TEXT);
                     }
                     if (resultsBuffer[1] > THRESHOLD_HIGH) {
                     // Servo motor goes up
-                    //printf("Camera up\n");
+                    
                         Graphics_drawStringCentered(&g_sContext,(int8_t *)"  Upward  ",AUTO_STRING_LENGTH,64,70,OPAQUE_TEXT);
                     } else if (resultsBuffer[1] < THRESHOLD_LOW) {
                     // Servo motor goes down
-                    //printf("Camera down\n");
+                    
                         Graphics_drawStringCentered(&g_sContext,(int8_t *)" Downward ",AUTO_STRING_LENGTH,64,70,OPAQUE_TEXT);
                     }
                     if (resultsBuffer[0] > THRESHOLD_HIGH) {
                     // Servo motor turns right
-                    //printf("Camera right\n");
+                    
                         Graphics_drawStringCentered(&g_sContext,(int8_t *)"   Right  ",AUTO_STRING_LENGTH,64,70, OPAQUE_TEXT);
                     } else if (resultsBuffer[0] < 1000 + THRESHOLD_LOW) {
                     // Servo motor turns left
-                    //printf("Camera left\n");
+                    
                         Graphics_drawStringCentered(&g_sContext, (int8_t *)"   Left   ", AUTO_STRING_LENGTH, 64, 70, OPAQUE_TEXT);
                     }
                 }
                 break;
 
-            default:
+            default:   //ATTENTION *******************************
                 Graphics_drawStringCentered(&g_sContext, (int8_t *)"Invalid Mode", AUTO_STRING_LENGTH, 64, 110, OPAQUE_TEXT);
                 break;
             }
                     // **Button3 Toggle (Bottom button)**
                     int button3State = !(P3IN & GPIO_PIN5); // Read Button2 state (active low)
-
+                    //If button 3 is pressed we change modes: we change from tank and camera movement mode to sleep mode
                     if (button3State && !button3PrevState) // Detect rising edge
                     {
                         mode = !mode; // Toggle state
