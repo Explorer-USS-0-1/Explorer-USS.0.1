@@ -14,7 +14,9 @@ void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
 void setup() {
   Serial.begin(115200);
   WiFi.mode(WIFI_STA);
-  Serial1.begin(9600, SERIAL_8N1, 16, 17); // opens a serial connection (BAUD RATE, RX, TX) 
+  Serial1.begin(9600, SERIAL_8N1, 16, 17); // opens a serial connection (BAUD RATE, RX, TX)
+                                          //SERIAL_8N1 means that the serial communication will have 8 data bits, no parity, 1 stop bit
+                                          //This config should match the MSP one
 
   //Initialize ESP_now
   if (esp_now_init() != ESP_OK) {
