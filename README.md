@@ -117,19 +117,20 @@ This setup ensures efficient and reliable communication between the MSP432 and E
 The ESP32-CAM is directly powered by an independet powerbank.
 
 
+#### Software reproducibility
 
 The MSP432 code is written in C and the porpose of it is to send the action that we entended the rover to make.
 First thing first is to set up the IDE were we want to test our code, for this purpose we use Code Composer and to do it we have to download it from [Code Composer Studio](https://www.ti.com/tool/CCSTUDIO) Integrated Development Environment (IDE), create a new project, select our board in the selection tab and give a name to the project.
 The second step is download and extract the [MSP432 DriverLib](https://www.ti.com/tool/download/SIMPLELINK-MSP432-SDK/3.40.01.02) and save where we want, then do the following action to setup the inviroment and be ready to test and run our code. 
 
 This are the steps to follow to correctly use the DriverLib for the Educational BoosterPack MKII.
-1- Extract simplelink_msp432p4_sdk_3_40_01_02.zip file. 
-2- Open CSS and left click on Project Folder to select Properties
-3- Select CSS Build
-4- Click ARM Compiler and then Include Options
-4-1 Add "simplelink_msp432p4_sdk_3_40_01_02/source" directory to "Add dir to #include search path" window.  
-5- Click ARM Linker and File Search Path
-5-1 Add "simplelink_msp432p4_sdk_3_40_01_02/source/ti/devices/msp432p4xx/driverlib/ccs/msp432p4xx_driverlib.lib" to "Include library file..." window
+1. Extract simplelink_msp432p4_sdk_3_40_01_02.zip file.
+2. Open CSS and left click on Project Folder to select Properties
+3. Select CSS Build
+4. Click ARM Compiler and then Include Options
+4.1 Add "simplelink_msp432p4_sdk_3_40_01_02/source" directory to "Add dir to #include search path" window.  
+5. Click ARM Linker and File Search Path
+5.1 Add "simplelink_msp432p4_sdk_3_40_01_02/source/ti/devices/msp432p4xx/driverlib/ccs/msp432p4xx_driverlib.lib" to "Include library file..." window
 
 What the code do?
 The code put in action the rover. In the code we have a machine state that pop up when we power up the board, it shows a white car and the frase "Welcome Back !" than when if we
@@ -139,9 +140,9 @@ All this is possible thanks to the handler, that will listen for the interrupt o
 ## PIN LAYOUT
 
  Table 3: MSP432 Pins Axis Joystick with Push Buttons
-| ** Pin Functions** | **MSP432 Pin** |   
+| **Pin Functions**  | **MSP432 Pin** |   
 |---------------     |----------------|
-| Hori X-axis        | P6.0	      | 
+| Hori X-axis        | P6.0	          | 
 | Verti Y-axis       | P4.4           |
 | Select button      | P4.1           |
 | S2 button          | P5.1           | 
