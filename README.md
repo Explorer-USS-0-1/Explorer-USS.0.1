@@ -135,6 +135,7 @@ This setup ensures efficient and reliable communication between the MSP432 and E
 
 
 The ESP32-CAM is directly powered by an independent powerbank.
+
 The MSP-EXP432P401R is powered by an independent powerbank attached to it.
 
 
