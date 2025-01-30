@@ -71,7 +71,7 @@ To build and use this project, you need the following hardware:
 #### Esp1 Setup  
 1. Connect the ESP with a computer.  
 2. Go to [`Rover/Final/EspSender.ino`](Rover/Final/EspSender.ino) and download the file.  
-3. Open it and change the variable `broadcastAddress[]` with the address of the ESP connected to the rover (*see [Communication Section](#communication-section)*).  
+3. Open it and change the variable `broadcastAddress[]` with the address of the ESP connected to the rover (*see [Communication Section](#COMMUNICATION)*).  
 4. Upload the code.  
 
 #### Esp2 Setup  
