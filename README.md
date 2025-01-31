@@ -3,10 +3,6 @@ Here we can put whatever we make.
 
 We are gonna put here also all the details of the project, to reference check the projects of the previous years, like this one: https://github.com/Clown-Machine/ClawMachine?tab=readme-ov-file
 
-## Link to powerpoint and Youtube video
-- Youtube https://youtu.be/4N75zm8ps9I
-- Powerpoint 
-
 So we have to say a lot of things also about how to vreate and build the project.
 
 ==========================================================================
@@ -208,6 +204,10 @@ First thing first set up the IDE , for this purpose use [Code Composer Studio](h
 The ESP32-CAM is directly powered by an independent powerbank.
 
 The MSP-EXP432P401R is powered by an independent powerbank attached to it.
+
+## Link to powerpoint and Youtube video
+- Youtube https://youtu.be/4N75zm8ps9I
+- Powerpoint 
 
 
 
