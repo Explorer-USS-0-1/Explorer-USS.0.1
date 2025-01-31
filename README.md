@@ -56,6 +56,11 @@ To build and use this project, you need the following hardware:
 
   <img src="https://github.com/user-attachments/assets/5cdeec9a-8a6c-414c-9cd5-5fc2740a3cf2" width=30% height=30%>
 
+  <img src="https://github.com/user-attachments/assets/58819a49-b9a0-49c3-a7f6-ef14f77d2d3b" width=30% height=30%>
+
+
+
+
   
 
 
