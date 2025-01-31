@@ -81,7 +81,7 @@ To build and use this project, you need the following hardware:
 ##### Msp432 Setup
 1. Go to the section below (MSP432 DriverLib Setup) to setup the DriverLib to be able to use the [Educational BoosterPack MKII](https://www.ti.com/tool/BOOSTXL-EDUMKII).
 2. Connect the MSP with a computer.
-3. Go to ['Rover/MSP + ESP FINAL/main.c](Rover/MSP + ESP FINAL/main.c), ['Rover/MSP + ESP FINAL/functions.h'](Rover/MSP + ESP FINAL/functions.h) and ['Rover/MSP + ESP FINAL/functions.c'](Rover/MSP + ESP FINAL/functions.c) and download the files.
+3. Go to [`Rover/MSP + ESP FINAL/main.c`](Rover/MSP + ESP FINAL/main.c), [`Rover/MSP + ESP FINAL/functions.h`](Rover/MSP + ESP FINAL/functions.h) and [`Rover/MSP + ESP FINAL/functions.c`](Rover/MSP + ESP FINAL/functions.c) and download the files.
 4. Open it in the projects previously created at point 1.
 5. Upload and run the code.
 
