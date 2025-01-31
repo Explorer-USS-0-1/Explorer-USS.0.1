@@ -127,10 +127,11 @@ Now you can use EXPLORER USS.0.1 to go everywhere you want, and see what your ey
 ## COMMUNICATION
 
 This project is divided into two modules: the **controller** and the **rover**. These modules are connected via ESP-NOW protocol using two ESP32 microcontrollers. All the information originates from the MSP432 microcontroller, which sends it to **ESP32-1**. ESP32-1 then transmits the data to **ESP32-2**, which interprets the messages and sends instructions to the DC motors and servo motors on the rover. The connection between the ESP's is done using the libraries <esp_now.h> and <WiFi.h> in Arduino IDE. 
+The decision to use the ESP-NOW protocol is due to the reliability and long connection distance it can maintain.
 
 >[!IMPORTANT]
 >
->To set up the ESP32's connection you will need to know the IP address of the Rover's ESP32. Here's a quick tutorial how: https://randomnerdtutorials.com/get-change-esp32-esp8266-mac-address-arduino/
+>To set up and use ESP-NOW you need to know the IP address of the Rover's ESP32. Here's a quick tutorial how: https://randomnerdtutorials.com/get-change-esp32-esp8266-mac-address-arduino/
 
 To establish communication between the MSP432 and ESP32-1, we had three options: **I2C**, **UART**, and **SPI**. We chose **UART** because it requires fewer pins and is simpler to implement. Due to the pin layout of the MSP432, we are limited to using UART module **A2**, with pins **3.2 (Rx)** and **3.3 (Tx)**, connected to pins **17 (TX)** and **16 (Rx)** respectively. 
 
