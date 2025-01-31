@@ -96,10 +96,11 @@ To build and use this project, you need the following hardware:
 ##### Esp32-Cam Setup
 1. Connect the Esp-cam whit a computer.
 2. Go to [`Rover/Final/EspSender.ino`](Rover/Esp32Cam) ,download all the files in the folder and create a folder with all of them inside.
-3. Open the CameraWebServerEsp32Cam.ino file with Arduino IDE.
-4. Upload and run the code. 
+3. Open the CameraWebServerEsp32Cam.ino file with Arduino IDE. In the const char *ssid and const char *password variables (line 39 and 40 of the code) put the name and the password of the wi-fi you're going to use to host the webserver;
+4. Upload and run the code.
+5. Only for the firs time (or everytime you change the host wi-fi), you have to copy the IP ADRESS ,printed in output on the Serial monitor of your pc, and paste it on a browser tab. 
 
-Once you have ensured the connection between the 2 ESP32 (see COMMUNICATION section to know how), you can start to use the rover.
+Once you have ensured the connection between the 2 ESP32 (see COMMUNICATION section to know how), and the webserver for the ESP32-CAM is working, you can start to use the rover.
    
 ## HOW TO USE
 
@@ -120,7 +121,7 @@ To use the camera, press the S2 button (position right/top of the controller) to
 * DOWN: move the camera down.
 * RIGHT: move the camera right.
 * LEFT: move the camera left.
-* JOYSTIC BUTTON: reset the camera position to the center.
+* JOYSTICK BUTTON: reset the camera position to the center.
 
 Pressing the S2 button will the switch again to the TANK mode, and so on.
 All this is possible thanks to the handler, that will listen for the interrupt of an action at any moment and send the message to the Esp32-1.
