@@ -141,7 +141,7 @@ The UART is configured to use the **SMCLK (Sub-Main Clock)** for the following r
 
 This setup ensures efficient and reliable communication between the MSP432 and ESP1 while optimizing power consumption and resource allocation.
 
-### PIN LAYOUT
+## PIN LAYOUT
 
  Table 1: ESP32 connected to MSP432
 | **ESP32 Pin** | **MSP432 Pin** |   
