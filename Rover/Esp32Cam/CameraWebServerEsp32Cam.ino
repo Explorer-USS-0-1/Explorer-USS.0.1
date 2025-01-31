@@ -36,8 +36,8 @@
 // ===========================
 // Enter your WiFi credentials
 // ===========================
-const char *ssid = "Redmi 13C";
-const char *password = "ciao1000";
+const char *ssid = "XXXXXX";
+const char *password = "XXXXXX";
 
 void startCameraServer();
 void setupLedFlash(int pin);
