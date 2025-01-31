@@ -67,6 +67,12 @@ To build and use this project, you need the following hardware:
 
 ### Software setup
 
+##### Msp432 Setup
+1. Go to the section below (MSP432 DriverLib Setup) to setup the DriverLib to be able to use the [Educational BoosterPack MKII](https://www.ti.com/tool/BOOSTXL-EDUMKII).
+2. Connect the MSP with a computer.
+3. Go to ['Rover/MSP + ESP FINAL/main.c], ['Rover/MSP + ESP FINAL/functions.h'] and ['Rover/MSP + ESP FINAL/functions.c'] and download the files.
+4. Open it in the projects previously created at point 1.
+5. Upload and run the code.
 
 ##### Esp1 Setup  
 1. Connect the ESP with a computer.  
@@ -79,7 +85,32 @@ To build and use this project, you need the following hardware:
 2. Go to [`Rover/Final/DcandServo.ino`](Rover/Final/DcandServo.ino) and download the file.  
 3. Open it and install the library: **"ESP32Servo"** by *Kevin Harrington, John K. Bennett*.  
 4. Upload and run the code.
+
+   
 ## HOW TO USE
+
+What the code of the MSP432 do?
+The code put in action the rover. In the code we have a machine state that pop up when we power up the board, it shows a white car and the frase "Welcome Back !". 
+![MSP3](https://github.com/user-attachments/assets/8605fec1-2361-48fc-9933-6e618ff1fb74)
+If we want to start move the tank we have to press the S3 button (position right/bottom) of the controller, then will shows the state of the rover and will enable the movement. At this point is necessary only to move the joistick to make the rover move.
+* UP: move the rover forward.
+* DOWN: move the rover backward.
+* RIGHT: move the rover right.
+* LEFT: move the rover left
+  
+![MSP1](https://github.com/user-attachments/assets/8842cbce-7701-402d-b01e-eaa041b66429).
+Press the S2 button (position right/top) of the controller to switch mode and make the camera move with the joistick.
+* UP: move the camera up.
+* DOWN: move the camera down.
+* RIGHT: move the camera right.
+* LEFT: move the camera left.
+* JOYSTIC BUTTON: reset the camera position to the center.
+
+If u press the S2 button(position right/top) the mode will the swetch agen to the rover movement mode.
+All this is possible thanks to the handler, that will listen for the interrupt of an action at any moment and send the message to the Esp.  
+![MSP2](https://github.com/user-attachments/assets/1ccb45c1-9b9d-47cd-8836-0c30a3ca162b).
+
+
 
 ## COMMUNICATION
 
@@ -138,12 +169,22 @@ The ESP32-CAM is directly powered by an independent powerbank.
 
 The MSP-EXP432P401R is powered by an independent powerbank attached to it.
 
+ Table 3: MSP432 Pins Axis Joystick with Push Buttons
+| **Pin Functions**  | **MSP432 Pin** |   
+|---------------     |----------------|
+| Hori X-axis        | P6.0	          | 
+| Verti Y-axis       | P4.4           |
+| Select button      | P4.1           |
+| S2 button          | P5.1           | 
+| S3 button          | P3.5           | 
 
-## SOFTWARE REPRODUCIBILITY
 
-The MSP432 code is written in C and the porpose of it is to send the action that we entended the rover to make.
-First thing first is to set up the IDE were we want to test our code, for this purpose we use Code Composer and to do it we have to download it from [Code Composer Studio](https://www.ti.com/tool/CCSTUDIO) Integrated Development Environment (IDE), create a new project, select our board in the selection tab and give a name to the project.
-The second step is download and extract the [MSP432 DriverLib](https://www.ti.com/tool/download/SIMPLELINK-MSP432-SDK/3.40.01.02) and save where we want, then do the following action to setup the inviroment and be ready to test and run our code. 
+## MSP432 DriverLib Setup
+
+The MSP432 code is written in C and the porpose of it is to send the action that we entended the rover.
+First thing first is to set up the IDE where we want to test our code, for this purpose we use Code Composer and to do it we have to download it from [Code Composer Studio](https://www.ti.com/tool/CCSTUDIO) Integrated Development Environment (IDE).
+1. Create a new project, select our board in the selection tab and give a name to the project.
+2. Download and extract the [MSP432 DriverLib](https://www.ti.com/tool/download/SIMPLELINK-MSP432-SDK/3.40.01.02) and save where we want, then do the following action to setup the inviroment and be ready to test and run our code. 
 
 This are the steps to follow to correctly use the DriverLib for the Educational BoosterPack MKII.
 1. Extract simplelink_msp432p4_sdk_3_40_01_02.zip file.
@@ -154,20 +195,8 @@ This are the steps to follow to correctly use the DriverLib for the Educational 
 6. Click ARM Linker and File Search Path
 7. Add "simplelink_msp432p4_sdk_3_40_01_02/source/ti/devices/msp432p4xx/driverlib/ccs/msp432p4xx_driverlib.lib" to "Include library file..." window
 
-What the code do?
-The code put in action the rover. In the code we have a machine state that pop up when we power up the board, it shows a white car and the frase "Welcome Back !" than when if we
-want to start move the tank we have to press the S3 button (position right/bottom) of the controller, that will shows the state of the rover and will enable the movement. At this point is necessary only to move the joistick to make the rover move or press the S2 button (position right/top) of the controller to switch mode and make the camera move with the joistick.
-All this is possible thanks to the handler, that will listen for the interrupt of an action at any moment. 
 
-### PIN LAYOUT
 
- Table 3: MSP432 Pins Axis Joystick with Push Buttons
-| **Pin Functions**  | **MSP432 Pin** |   
-|---------------     |----------------|
-| Hori X-axis        | P6.0	          | 
-| Verti Y-axis       | P4.4           |
-| Select button      | P4.1           |
-| S2 button          | P5.1           | 
-| S3 button          | P3.5           | 
+
 
 
