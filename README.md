@@ -83,7 +83,7 @@ After printing all the files linked in the **hardware requirements** ( or any ot
 1. The track frames (whit the cogs in them), and put the DC motors in them;
 2. Put the track frames on the baseframe, using screws and bolts to secure the 2 parts, and then put the L298N driver holders in the holes of the base (they should perfectly fit);
 3. Use screw and bolts to secure the L298N divers to their holder frames; also connect the motors to the drivers and be sure that the opposing engines have the order of the cables reversed. At the same time be sure that the motors sharing the track frame have the same cables order;
-4. Use the F/F jumper wires to connect all the motor speed pins to the ESP32-2 (displayed in the [**PIN LAYOUT**](#PIN_LAYOUT) section, ESP32-2 table);
+4. Use the F/F jumper wires to connect all the motor speed pins to the ESP32-2 (displayed in the [PIN LAYOUT](#PIN) section, ESP32-2 table);
 
 
 ### Software setup
