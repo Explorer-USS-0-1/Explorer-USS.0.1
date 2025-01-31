@@ -69,20 +69,19 @@ void OnDataRecv(const uint8_t * mac, const uint8_t *incomingData, int len) {
       rightstop();
     }
     else if (DATA == "cright") {
-        servoX.write(42);
+      rightCam();
     }
     else if (DATA == "cleft.") {
-      servoX.write(142);
+      leftCam();
     }
     else if (DATA == "down..") {
-      servoY.write (30);
+      downCam();
     }
     else if (DATA == "up....") {
-      servoY.write(115);
+      upCam();
     }
     else if (DATA == "middle") {
-      servoX.write(87);
-      servoY.write(63);
+      defaultCam();
     }
 }  
 /* SPEED CONTROLS; SAVE IF NEEDED LATER
@@ -99,7 +98,29 @@ void OnDataRecv(const uint8_t * mac, const uint8_t *incomingData, int len) {
       analogWrite(MOTOR4_SPEED,200);
   }*/
 
+//THESE ARE THE FUNCTIONS TO MAKE THE CAMERA MOVE
+void rightCam(){
+  servoX.write(42);
+}
 
+void leftCam(){
+  servoX.write(142);
+}
+
+void upCam(){
+  servoY.write(115);
+}
+
+void downCam(){
+  servoY.write (30);
+}
+
+void defaultCam(){
+  servoX.write(87);
+  servoY.write(63);
+}
+
+//THESE ARE THE FUNCTIONS TO MAKE THE ROVER MOVE
 void leftforward(){
   digitalWrite(motor1pin1,HIGH);
   digitalWrite(motor1pin2,LOW);
@@ -164,8 +185,6 @@ void setup() {
   pinMode(MOTOR3_SPEED, OUTPUT);
   pinMode(MOTOR4_SPEED, OUTPUT);
 
-  Serial.begin(115200);
-
   analogWrite(MOTOR1_SPEED,200);
   analogWrite(MOTOR2_SPEED,200);
   analogWrite(MOTOR3_SPEED,200);
@@ -177,6 +196,8 @@ void setup() {
   servoX.write(87);
   servoY.write(63);
 
+  Serial.begin(115200);
+  
   WiFi.mode(WIFI_STA);
 
   //Here we initialize the ESP-NOW protocol
