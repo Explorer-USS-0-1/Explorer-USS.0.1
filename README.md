@@ -46,6 +46,7 @@ To build and use this project, you need the following hardware:
 - [Pan part for "turret"](https://github.com/Dennis-Alberti/IoT-project/blob/main/Rover_chassis_and_tools_printfiles/Pan-tilt-tapa_finale.stl)
 - [Tilt part for "turret"](https://github.com/Dennis-Alberti/IoT-project/blob/main/Rover_chassis_and_tools_printfiles/platformafinalv2.3.stl)
 - [Esp32-Cam holder](https://github.com/Dennis-Alberti/IoT-project/blob/main/Rover_chassis_and_tools_printfiles/finalemnte%20v2.stl)
+- [Power System Holder](https://github.com/Dennis-Alberti/IoT-project/blob/main/Rover_chassis_and_tools_printfiles/power%20supply%20holder%20v4.stl)
 - Jumper wires of all types (M/F , M/M , F/F)
 - A lot of screws and bolts
 - 1 Usb-C cable
@@ -72,7 +73,18 @@ To build and use this project, you need the following hardware:
 
 ### Hardware setup
 
-The hardware setup requires a lot of procedures and planning, because all the structural part of the rover (excluding bolts and screws) are 3D printed.  
+The hardware setup requires time and planning, because **all the structural part** of the rover are **3D printed**.
+
+>[!Note]
+>
+>The prints of our project were made with 100% reciled PLA.
+
+After printing all the files linked in the **hardware requirements** ( or any other file in the [Rover_chassis_and_tools_printfile](https://github.com/Dennis-Alberti/IoT-project/tree/main/Rover_chassis_and_tools_printfiles) folder), you can start build up the chassis in this order:
+1. The track frames (whit the cogs in them), and put the DC motors in them;
+2. Put the track frames on the baseframe, using screws and bolts to secure the 2 parts, and then put the L298N driver holders in the holes of the base (they should perfectly fit);
+3. Use screw and bolts to secure the L298N divers to their holder frames; also connect the motors to the drivers and be sure that the opposing engines have the order of the cables reversed. At the same time be sure that the motors sharing the track frame have the same cables order;
+4. Use the F/F jumper wires to connect all the motor speed pins to the ESP32-2 (displayed in the [**PIN LAYOUT**](#PIN_LAYOUT) section, ESP32-2 table);
+
 
 ### Software setup
 
@@ -180,10 +192,6 @@ This setup ensures efficient and reliable communication between the MSP432 and E
 | 32            | -                   | servoY (Signal)  | -                       |
 | GND           | -                   | -                | GND                     |
 | VIN           | -                   | -                | 5V                      |
-| -             | Power               | -                | 12V - 1.5A              |
-| -             | GND                 | -                | GND                     |
-| -             | -                   | Power            | 5V                      |
-| -             | -                   | GND              | GND                     |
 
  Table 3: MSP432 Pins Axis Joystick with Push Buttons
 | **Pin Functions**  | **MSP432 Pin** |   
