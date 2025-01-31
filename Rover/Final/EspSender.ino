@@ -7,8 +7,8 @@ esp_now_peer_info_t peerInfo; //Saves the
 
 
 void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
-  Serial.print("\r\nLast Packet Send Status:\t");
-  Serial.println(status == ESP_NOW_SEND_SUCCESS ? "Delivery Success" : "Delivery Fail");
+  Serial.print("\r\nLast Packet Send Status:\t");                                         //these line are used if you want to debug 
+  Serial.println(status == ESP_NOW_SEND_SUCCESS ? "Delivery Success" : "Delivery Fail");  //and check if the packets are sent correctly
 }
 
 void setup() {
@@ -18,12 +18,12 @@ void setup() {
                                           //SERIAL_8N1 means that the serial communication will have 8 data bits, no parity, 1 stop bit
                                           //This config should match the MSP one
 
-  //Initialize ESP_now
+  //Initialize ESP_now protocol
   if (esp_now_init() != ESP_OK) {
     Serial.println("Error initializing ESP-NOW");
     return;
   }
-  esp_now_register_send_cb(OnDataSent);
+  esp_now_register_send_cb(OnDataSent); 
 
   memcpy(peerInfo.peer_addr, broadcastAddress, 6); //Saves and register the destination IP
   peerInfo.channel = 0;  
