@@ -81,18 +81,23 @@ To build and use this project, you need the following hardware:
 4. Open it in the projects previously created at point 1.
 5. Upload and run the code.
 
-##### Esp1 Setup  
+##### Esp32-1 Setup  
 1. Connect the ESP with a computer.  
-2. Go to [`Rover/Final/EspSender.ino`](Rover/Final/EspSender.ino) and download the file.  
-3. Open it and change the variable `broadcastAddress[]` with the address of the ESP connected to the rover (*see [Communication Section](#COMMUNICATION)*).  
+2. Go to [`Rover/Final/EspSender.ino`](Rover/Final/EspSender.ino) ,and download the file.   
+3. Open it with Arduino IDE and change the variable `broadcastAddress[]` with the address of the ESP connected to the rover (*see [Communication Section](#COMMUNICATION)*).  
 4. Upload and run the code.  
 
-##### Esp2 Setup  
-1. Connect the ESP with a computer.  
-2. Go to [`Rover/Final/DcandServo.ino`](Rover/Final/DcandServo.ino) and download the file.  
-3. Open it and install the library: **"ESP32Servo"** by *Kevin Harrington, John K. Bennett*.  
+##### Esp32-2 Setup  
+1. Connect the ESP with a computer.
+2. Go to [`Rover/Final/DcandServo.ino`](Rover/Final/DcandServo.ino), and download the file. 
+3. Open it with Arduino IDE and install the library: **"ESP32Servo"** by *Kevin Harrington, John K. Bennett*.  
 4. Upload and run the code.
 
+##### Esp32-Cam Setup
+1. Connect the Esp-cam whit a computer.
+2. Go to [`Rover/Final/EspSender.ino`](Rover/Esp32Cam) ,download all the files in the folder and create a folder with all of them inside.
+3. Open the CameraWebServerEsp32Cam.ino file with Arduino IDE.
+4. Upload and run the code. 
 
 Once you have ensured the connection between the 2 ESP32 (see COMMUNICATION section to know how), you can start to use the rover.
    
