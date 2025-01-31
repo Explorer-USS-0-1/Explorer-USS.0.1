@@ -189,8 +189,9 @@ This setup ensures efficient and reliable communication between the MSP432 and E
 ## MSP432 DriverLib Setup
 
 First thing first set up the IDE , for this purpose use [Code Composer Studio](https://www.ti.com/tool/CCSTUDIO) Integrated Development Environment (IDE) and:
-1. Create a new project, select the MSP432P401R board in the selection tab and give a name to the project.
-2. Download and extract the [MSP432 DriverLib](https://www.ti.com/tool/download/SIMPLELINK-MSP432-SDK/3.40.01.02) and save in a reachable directory, then do the following action to setup the environment:   
+- Create a new project, select the MSP432P401R board in the selection tab and give a name to the project.
+- Download and extract the [MSP432 DriverLib](https://www.ti.com/tool/download/SIMPLELINK-MSP432-SDK/3.40.01.02) and save in a reachable directory, then do the following action to setup the environment:
+   
   1. Extract simplelink_msp432p4_sdk_3_40_01_02.zip file.
   2. Open CSS and left click on Project Folder to select Properties
   3. Select CSS Build
