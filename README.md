@@ -192,13 +192,13 @@ First thing first set up the IDE , for this purpose use [Code Composer Studio](h
 - Create a new project, select the MSP432P401R board in the selection tab and give a name to the project.
 - Download and extract the [MSP432 DriverLib](https://www.ti.com/tool/download/SIMPLELINK-MSP432-SDK/3.40.01.02) and save in a reachable directory, then do the following action to setup the environment:
    
-  1. Extract simplelink_msp432p4_sdk_3_40_01_02.zip file.
-  2. Open CSS and left click on Project Folder to select Properties
-  3. Select CSS Build
-  4. Click ARM Compiler and then Include Options
-  5. Add "simplelink_msp432p4_sdk_3_40_01_02/source" directory to "Add dir to #include search path" window.  
-  6. Click ARM Linker and File Search Path
-  7. Add "simplelink_msp432p4_sdk_3_40_01_02/source/ti/devices/msp432p4xx/driverlib/ccs/msp432p4xx_driverlib.lib" to "Include library file..." window
+1. Extract simplelink_msp432p4_sdk_3_40_01_02.zip file.
+2. Open CSS and left click on Project Folder to select Properties
+3. Select CSS Build
+4. Click ARM Compiler and then Include Options
+5. Add "simplelink_msp432p4_sdk_3_40_01_02/source" directory to "Add dir to #include search path" window.  
+6. Click ARM Linker and File Search Path
+7. Add "simplelink_msp432p4_sdk_3_40_01_02/source/ti/devices/msp432p4xx/driverlib/ccs/msp432p4xx_driverlib.lib" to "Include library file..." window
 
 ## POWER SYSTEM MANAGEMENT
 
