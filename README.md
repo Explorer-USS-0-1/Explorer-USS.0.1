@@ -100,12 +100,11 @@ To build and use this project, you need the following hardware:
    
 ## HOW TO USE
 
-What the code of the MSP432 do?
-The code put in action the rover. In the code we have a machine state that pop up when we power up the board, it shows a white car and the frase "Welcome Back !".
+The MSP432 code put in action the rover. The initial state shows a white car and the phrase "Welcome Back !". 
 
 <img src="https://github.com/user-attachments/assets/3f374e63-f392-430f-9573-3f1e41f39e16" width=30% height=30%>
 
-If we want to start move the tank we have to press the S3 button (position right/bottom) of the controller, then will shows the state of the rover and will enable the movement. At this point is necessary only to move the joistick to make the rover move.
+To start moving the tank, press the S3 button (position right/bottom of the controller), that will put the joystick in TANK mode, displaying the current state on the screen. Now you can move the rover using the joystick.
 * UP: move the rover forward.
 * DOWN: move the rover backward.
 * RIGHT: move the rover right.
@@ -113,14 +112,14 @@ If we want to start move the tank we have to press the S3 button (position right
   
 <img src="https://github.com/user-attachments/assets/8842cbce-7701-402d-b01e-eaa041b66429" width=30% height=30%>
 
-Press the S2 button (position right/top) of the controller to switch mode and make the camera move with the joistick.
+To use the camera, press the S2 button (position right/top of the controller) to switch that will put the joystick in CAMERA mode, and use the joystick to point in the wanted direction. 
 * UP: move the camera up.
 * DOWN: move the camera down.
 * RIGHT: move the camera right.
 * LEFT: move the camera left.
 * JOYSTIC BUTTON: reset the camera position to the center.
 
-If u press the S2 button(position right/top) the mode will the swetch agen to the rover movement mode.
+Pressing the S2 button will the switch again to the TANK mode, and so on.
 All this is possible thanks to the handler, that will listen for the interrupt of an action at any moment and send the message to the Esp.
 
 <img src="https://github.com/user-attachments/assets/1ccb45c1-9b9d-47cd-8836-0c30a3ca162b" width=30% height=30%>
