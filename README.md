@@ -72,6 +72,8 @@ To build and use this project, you need the following hardware:
 
 ### Hardware setup
 
+The hardware setup requires a lot of procedures and planning, because all the structural part of the rover (excluding bolts and screws) are 3D printed.  
+
 ### Software setup
 
 ##### Msp432 Setup
