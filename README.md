@@ -91,14 +91,15 @@ To build and use this project, you need the following hardware:
 
 What the code of the MSP432 do?
 The code put in action the rover. In the code we have a machine state that pop up when we power up the board, it shows a white car and the frase "Welcome Back !". 
-![MSP3](https://github.com/user-attachments/assets/8605fec1-2361-48fc-9933-6e618ff1fb74)
+<img src="https://github.com/user-attachments/assets/ff9f2203-a6de-4b1f-9edb-2b841796b88a" width="150" height="280">.
+
 If we want to start move the tank we have to press the S3 button (position right/bottom) of the controller, then will shows the state of the rover and will enable the movement. At this point is necessary only to move the joistick to make the rover move.
 * UP: move the rover forward.
 * DOWN: move the rover backward.
 * RIGHT: move the rover right.
 * LEFT: move the rover left
   
-![MSP1](https://github.com/user-attachments/assets/8842cbce-7701-402d-b01e-eaa041b66429).
+<img src="https://github.com/user-attachments/assets/8842cbce-7701-402d-b01e-eaa041b66429" width="150" height="280">.
 Press the S2 button (position right/top) of the controller to switch mode and make the camera move with the joistick.
 * UP: move the camera up.
 * DOWN: move the camera down.
@@ -108,7 +109,7 @@ Press the S2 button (position right/top) of the controller to switch mode and ma
 
 If u press the S2 button(position right/top) the mode will the swetch agen to the rover movement mode.
 All this is possible thanks to the handler, that will listen for the interrupt of an action at any moment and send the message to the Esp.  
-![MSP2](https://github.com/user-attachments/assets/1ccb45c1-9b9d-47cd-8836-0c30a3ca162b).
+<img src="https://github.com/user-attachments/assets/1ccb45c1-9b9d-47cd-8836-0c30a3ca162b" width="150" height="280">.
 
 
 
