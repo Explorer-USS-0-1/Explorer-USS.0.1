@@ -191,19 +191,27 @@ void _graphicsInit() {
 
 // ADC initialization
 void _adcInit() {
+        // Configure GPIO Pins for ADC Input P6.0 and P4.4 are set as peripheral input pins for the ADC module.
     GPIO_setAsPeripheralModuleFunctionInputPin(GPIO_PORT_P6, GPIO_PIN0, GPIO_TERTIARY_MODULE_FUNCTION);
     GPIO_setAsPeripheralModuleFunctionInputPin(GPIO_PORT_P4, GPIO_PIN4, GPIO_TERTIARY_MODULE_FUNCTION);
-
+        
+        // Enable and Initialize the ADC14 Module
     ADC14_enableModule();
     ADC14_initModule(ADC_CLOCKSOURCE_ADCOSC, ADC_PREDIVIDER_64, ADC_DIVIDER_8, 0);
+        
+        //Configure ADC for Multi-Sequence Mode allowing multiple channels to be read in sequence.
     ADC14_configureMultiSequenceMode(ADC_MEM0, ADC_MEM1, true);
+        
+        //Configure ADC Conversion Memory ADC_MEM0 reads from analog input A15. ADC_MEM1 reads from analog input A9.
     ADC14_configureConversionMemory(ADC_MEM0, ADC_VREFPOS_AVCC_VREFNEG_VSS, ADC_INPUT_A15, ADC_NONDIFFERENTIAL_INPUTS);
     ADC14_configureConversionMemory(ADC_MEM1, ADC_VREFPOS_AVCC_VREFNEG_VSS, ADC_INPUT_A9, ADC_NONDIFFERENTIAL_INPUTS);
-
+        
+        //Enable ADC Interrupts
     ADC14_enableInterrupt(ADC_INT1);
     Interrupt_enableInterrupt(INT_ADC14);
     Interrupt_enableMaster();
 
+        //Start ADC Sampling and Conversion. Start continuous automatic conversions. 
     ADC14_enableSampleTimer(ADC_AUTOMATIC_ITERATION);
     ADC14_enableConversion();
     ADC14_toggleConversionTrigger(); // Start the ADC conversion
