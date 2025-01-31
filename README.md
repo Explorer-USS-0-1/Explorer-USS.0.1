@@ -97,6 +97,8 @@ To build and use this project, you need the following hardware:
 3. Open it and install the library: **"ESP32Servo"** by *Kevin Harrington, John K. Bennett*.  
 4. Upload and run the code.
 
+
+Once you have ensured the connection between the 2 ESP32 (see COMMUNICATION section to know how), you can start to use the rover.
    
 ## HOW TO USE
 
@@ -120,11 +122,11 @@ To use the camera, press the S2 button (position right/top of the controller) to
 * JOYSTIC BUTTON: reset the camera position to the center.
 
 Pressing the S2 button will the switch again to the TANK mode, and so on.
-All this is possible thanks to the handler, that will listen for the interrupt of an action at any moment and send the message to the Esp.
+All this is possible thanks to the handler, that will listen for the interrupt of an action at any moment and send the message to the Esp32-1.
 
 <img src="https://github.com/user-attachments/assets/1ccb45c1-9b9d-47cd-8836-0c30a3ca162b" width=30% height=30%>
 
-
+Now you can use EXPLORER USS.0.1 to go everywhere you want, and see what your eyes could never!
 
 ## COMMUNICATION
 
@@ -178,11 +180,6 @@ This setup ensures efficient and reliable communication between the MSP432 and E
 | -             | -                   | Power            | 5V                      |
 | -             | -                   | GND              | GND                     |
 
-
-The ESP32-CAM is directly powered by an independent powerbank.
-
-The MSP-EXP432P401R is powered by an independent powerbank attached to it.
-
  Table 3: MSP432 Pins Axis Joystick with Push Buttons
 | **Pin Functions**  | **MSP432 Pin** |   
 |---------------     |----------------|
@@ -195,19 +192,24 @@ The MSP-EXP432P401R is powered by an independent powerbank attached to it.
 
 ## MSP432 DriverLib Setup
 
-The MSP432 code is written in C and the porpose of it is to send the action that we entended the rover.
-First thing first is to set up the IDE where we want to test our code, for this purpose we use Code Composer and to do it we have to download it from [Code Composer Studio](https://www.ti.com/tool/CCSTUDIO) Integrated Development Environment (IDE).
-1. Create a new project, select our board in the selection tab and give a name to the project.
-2. Download and extract the [MSP432 DriverLib](https://www.ti.com/tool/download/SIMPLELINK-MSP432-SDK/3.40.01.02) and save where we want, then do the following action to setup the inviroment and be ready to test and run our code. 
+First thing first set up the IDE , for this purpose use [Code Composer Studio](https://www.ti.com/tool/CCSTUDIO) Integrated Development Environment (IDE) and:
+1. Create a new project, select the MSP432P401R board in the selection tab and give a name to the project.
+2. Download and extract the [MSP432 DriverLib](https://www.ti.com/tool/download/SIMPLELINK-MSP432-SDK/3.40.01.02) and save in a reachable directory, then do the following action to setup the environment:   
+  1. Extract simplelink_msp432p4_sdk_3_40_01_02.zip file.
+  2. Open CSS and left click on Project Folder to select Properties
+  3. Select CSS Build
+  4. Click ARM Compiler and then Include Options
+  5. Add "simplelink_msp432p4_sdk_3_40_01_02/source" directory to "Add dir to #include search path" window.  
+  6. Click ARM Linker and File Search Path
+  7. Add "simplelink_msp432p4_sdk_3_40_01_02/source/ti/devices/msp432p4xx/driverlib/ccs/msp432p4xx_driverlib.lib" to "Include library file..." window
 
-This are the steps to follow to correctly use the DriverLib for the Educational BoosterPack MKII.
-1. Extract simplelink_msp432p4_sdk_3_40_01_02.zip file.
-2. Open CSS and left click on Project Folder to select Properties
-3. Select CSS Build
-4. Click ARM Compiler and then Include Options
-5. Add "simplelink_msp432p4_sdk_3_40_01_02/source" directory to "Add dir to #include search path" window.  
-6. Click ARM Linker and File Search Path
-7. Add "simplelink_msp432p4_sdk_3_40_01_02/source/ti/devices/msp432p4xx/driverlib/ccs/msp432p4xx_driverlib.lib" to "Include library file..." window
+## POWER SYSTEM MANAGEMENT
+
+The ESP32-CAM is directly powered by an independent powerbank.
+
+The MSP-EXP432P401R is powered by an independent powerbank attached to it.
+
+
 
 
 
