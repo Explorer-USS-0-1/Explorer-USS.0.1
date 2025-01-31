@@ -52,6 +52,13 @@ To build and use this project, you need the following hardware:
 - 1 Usb-C cable
 - PLA of two different colors ( one for tracks, one for everything else)
 
+  <img src="https://github.com/user-attachments/assets/5cdeec9a-8a6c-414c-9cd5-5fc2740a3cf2" width=30% height=30%>
+
+  <img src="https://github.com/user-attachments/assets/b9918c82-8b12-4716-a93a-99824b7287e7" width=30% height=30%>
+
+
+
+
 #### Software
 - [Code Composer Studio](https://www.ti.com/tool/CCSTUDIO) Integrated Development Environment (IDE)
 - [MSP432 DriverLib](https://www.ti.com/tool/download/SIMPLELINK-MSP432-SDK/3.40.01.02)
@@ -92,7 +99,7 @@ To build and use this project, you need the following hardware:
 What the code of the MSP432 do?
 The code put in action the rover. In the code we have a machine state that pop up when we power up the board, it shows a white car and the frase "Welcome Back !".
 
-<img src="https://github.com/user-attachments/assets/3f374e63-f392-430f-9573-3f1e41f39e16" width=30% height=30%>.
+<img src="https://github.com/user-attachments/assets/3f374e63-f392-430f-9573-3f1e41f39e16" width=30% height=30%>
 
 If we want to start move the tank we have to press the S3 button (position right/bottom) of the controller, then will shows the state of the rover and will enable the movement. At this point is necessary only to move the joistick to make the rover move.
 * UP: move the rover forward.
@@ -100,7 +107,7 @@ If we want to start move the tank we have to press the S3 button (position right
 * RIGHT: move the rover right.
 * LEFT: move the rover left
   
-<img src="https://github.com/user-attachments/assets/8842cbce-7701-402d-b01e-eaa041b66429" width=30% height=30%>.
+<img src="https://github.com/user-attachments/assets/8842cbce-7701-402d-b01e-eaa041b66429" width=30% height=30%>
 
 Press the S2 button (position right/top) of the controller to switch mode and make the camera move with the joistick.
 * UP: move the camera up.
@@ -112,7 +119,7 @@ Press the S2 button (position right/top) of the controller to switch mode and ma
 If u press the S2 button(position right/top) the mode will the swetch agen to the rover movement mode.
 All this is possible thanks to the handler, that will listen for the interrupt of an action at any moment and send the message to the Esp.
 
-<img src="https://github.com/user-attachments/assets/1ccb45c1-9b9d-47cd-8836-0c30a3ca162b" width=30% height=30%>.
+<img src="https://github.com/user-attachments/assets/1ccb45c1-9b9d-47cd-8836-0c30a3ca162b" width=30% height=30%>
 
 
 
