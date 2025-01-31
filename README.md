@@ -55,17 +55,11 @@ To build and use this project, you need the following hardware:
 - 1 Usb-C cable
 - PLA of two different colors ( one for tracks, one for everything else)
 
-  <img src="https://github.com/user-attachments/assets/b9918c82-8b12-4716-a93a-99824b7287e7" width=10% height=10%>
+  <img src="https://github.com/user-attachments/assets/b9918c82-8b12-4716-a93a-99824b7287e7" width=15% height=15%>
 
   <img src="https://github.com/user-attachments/assets/5cdeec9a-8a6c-414c-9cd5-5fc2740a3cf2" width=30% height=30%>
 
-  <img src="https://github.com/user-attachments/assets/58819a49-b9a0-49c3-a7f6-ef14f77d2d3b" width=30% height=30%>
-
-
-
-
-  
-
+  <img src="https://github.com/user-attachments/assets/39ba9576-ec70-47a5-b851-bb9a8926c996" width=10% height=10%>
 
 
 
