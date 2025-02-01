@@ -143,7 +143,7 @@ Connect the MSP432P401R microcontroller whit the ESP32-1 using F/F Jumper wires,
 4. Upload and run the code.
 5. Only for the firs time (or everytime you change the host wi-fi), you have to copy the IP ADRESS ,printed in output on the Serial monitor of your pc, and paste it on a browser tab. 
 
-Once you have ensured the connection between the 2 ESP32 (see COMMUNICATION section to know how), and the webserver for the ESP32-CAM is working, you can start to use the rover.
+Once you have ensured the connection between the 2 ESP32 (see [COMMUNICATION](#COMMUNICATION) section to know how), and the webserver for the ESP32-CAM is working, you can start to use the rover.
    
 ## HOW TO USE
 
