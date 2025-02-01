@@ -110,9 +110,14 @@ Connect the MSP432P401R microcontroller whit the ESP32-1 using F/F Jumper wires,
 
    <img src="https://github.com/user-attachments/assets/1ccb45c1-9b9d-47cd-8836-0c30a3ca162b" width=40% height=40%>
 
+
+
+
 >[!IMPORTANT]
 >
 >**To power up everything the same way we did it, check out the [POWER SYSTEM MANAGEMENT](#POWER_SYSTEM_MANAGEMENT) section**
+
+
 
 ### Software setup
 
