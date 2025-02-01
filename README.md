@@ -88,10 +88,8 @@ After printing all the files linked in the [**hardware requirements**](#REQUIERE
 
 2. Put the track frames on the baseframe, using screws and bolts to secure the 2 parts, and then put the L298N driver holders in the holes of the base (they should perfectly fit);
 3. Use screw and bolts to secure the L298N divers to their holder frames; also connect the motors to the drivers and be sure that the opposing engines have the color order of the cables reversed. At the same time be sure that the motors sharing the track frame have the same cables color order;
-4. Use the F/F jumper wires to connect all the motor speed pins to the ESP32-2 (displayed in the [**PIN LAYOUT**](#PIN_LAYOUT) section, ESP32-2 table);
-   
       <img src="https://github.com/user-attachments/assets/0adfb10b-93e5-46bb-99fb-dd0abeab3f99" width=30% height=30%>  
-    
+4. Use the F/F jumper wires to connect all the motor speed pins to the ESP32-2 (displayed in the [**PIN LAYOUT**](#PIN_LAYOUT) section, ESP32-2 table);
 6. Close the chassis whit the rover top frame, then put the tracks in place;
 7. Put inside the ESP32-Cam holder the ESP32-Cam, and then build up the "trurret" structure with the servomotors;
 8. Connect to the Esp32-2 the servomotors (following the same table of the point 4);
