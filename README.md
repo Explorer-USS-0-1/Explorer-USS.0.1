@@ -84,13 +84,13 @@ The hardware setup requires time and planning, because **all the structural part
 After printing all the files linked in the [**hardware requirements**](#REQUIEREMENTS) section ( or any other file in the [Rover_chassis_and_tools_printfile](https://github.com/Dennis-Alberti/IoT-project/tree/main/Rover_chassis_and_tools_printfiles) folder), you can start build up the chassis in this order:
 1. Build the track frames (whit the cogs), and put the DC motors in them;
  
-      <img src="https://github.com/user-attachments/assets/a3ed375e-4350-420f-856f-41f0282823ee" width=15% height=15%>  
+      <img src="https://github.com/user-attachments/assets/a3ed375e-4350-420f-856f-41f0282823ee" width=120% height=120%>  
 
 2. Put the track frames on the baseframe, using screws and bolts to secure the 2 parts, and then put the L298N driver holders in the holes of the base (they should perfectly fit);
 3. Use screw and bolts to secure the L298N divers to their holder frames; also connect the motors to the drivers and be sure that the opposing engines have the color order of the cables reversed. At the same time be sure that the motors sharing the track frame have the same cables color order;
 4. Use the F/F jumper wires to connect all the motor speed pins to the ESP32-2 (displayed in the [**PIN LAYOUT**](#PIN_LAYOUT) section, ESP32-2 table);
    
-      <img src="https://github.com/user-attachments/assets/0adfb10b-93e5-46bb-99fb-dd0abeab3f99" width=15% height=15%>  
+      <img src="https://github.com/user-attachments/assets/0adfb10b-93e5-46bb-99fb-dd0abeab3f99" width=30% height=30%>  
     
 6. Close the chassis whit the rover top frame, then put the tracks in place;
 7. Put inside the ESP32-Cam holder the ESP32-Cam, and then build up the "trurret" structure with the servomotors;
