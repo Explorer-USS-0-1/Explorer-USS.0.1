@@ -267,10 +267,33 @@ Table 4: Rover power system management
 
 ## Link to powerpoint and Youtube video
 - Youtube https://youtu.be/4N75zm8ps9I
-- Powerpoint 
+- Powerpoint
 
+## Issues and drawbacks faced during the project.
 
+In this section we want to explain the major difficulties encountered during the project
 
+One of the main drawback was using the MSP432 as a controller. In fact we noticed that the command input had some lag, approximately 500ms. Also using the MSP432 boosterpack limited the possibility to have simultameous movement of camera and rover. But we decided to use the board anyway to challenge us into understanding more complicated boards than an Arduino.
+
+Another problem was the lack of knowledge in the field of electronic engeniering. In fact we had no prior knowledge about the hardware and power management parts, so we had to study from zero how these worked.
+
+The last drawback was the limited budget.
+
+## TEAM MEMBERS
+
+The project was a developed in a team and the code was divided into many different areas (Rover, Communications, Graphics, Hardware, ...); each member focused therefore only on certain aspects of the project.
+
+- Riccardo Ferro (Leader)
+  - Contributed mainly to the creation of the physical part of the rover, desining the layout of the chassis, organizing the power system and setting up all the connections of the rover. He also contributed a lot to write the ESP32-2 (for motor control) and also the ESP32-1 communication part about the ESP-NOW protocol. He also setted-up the ESP-32 Camera.
+
+- Henrique Garcia -->correct the names if i write them wrong
+  - Contributed mainly to setup the ESP32-2 connection of the rover, to write the code of the ESP32-2 and ESP32-1 and also of the UART connection between the MSP432 and ESP32-1;
+
+- Dennis
+  -   
+
+- Tiago Silva
+  - 
 
 
 
