@@ -31,7 +31,7 @@ To build and use this project, you need the following hardware:
 - 4x DC Motors
 - 2x L298N motor's driver
 - 2x micro servomotor
-- A 12 volt 1.5 Amp powersource (for the motor controller board)
+- A 12 volt 3.5 Amp powersource (for the motor controller board)
 - 2x 5 volt powersource (1 for the Esp-Cam, 1 for the Servomotors and Esp32)
   - If you want, you can use a voltage step down board (we did this due to time and budget costrains)
 - 2x [rover track outer frame](https://github.com/Dennis-Alberti/IoT-project/blob/main/Rover_chassis_and_tools_printfiles/ProtoTank_TrackOuterFrame.stl)
