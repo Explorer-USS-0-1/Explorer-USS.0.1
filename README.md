@@ -212,7 +212,7 @@ This setup ensures efficient and reliable communication between the MSP432 and E
 | 19            | Motor3 Pin2         | -                | -                       |
 | 22            | Motor4 Pin1         | -                | -                       |
 | 23            | Motor4 Pin2         | -                | -                       |
-| 27            | Motor1 SPEED        | -                | -                       |
+| 27            | MOTOR1 SPEED        | -                | -                       |
 | 26            | MOTOR2 SPEED        | -                | -                       |
 | 14            | MOTOR3 SPEED        | -                | -                       |
 | 25            | MOTOR4 SPEED        | -                | -                       |
