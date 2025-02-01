@@ -99,14 +99,16 @@ After printing all the files linked in the [**hardware requirements**](#REQUIERE
 
 8. Mount on the rover chassis the "turret" and connect to the Esp32-2 the servomotors (following the same table of the point 4);
 
-      <img src="https://github.com/user-attachments/assets/8f971599-abff-492b-ba06-9f16f164475b" width=30% height=30%> 
+      <img src="https://github.com/user-attachments/assets/8f971599-abff-492b-ba06-9f16f164475b" width=40% height=40%> 
       <img src="https://github.com/user-attachments/assets/cd103219-1910-41a4-b3d5-4605beed4cd2" width=30% height=30%> 
 
 9. Now is possible put any additional accessory or tool ( from our printfile folder or any custom-made one ).
 
 #### JOYSTICK
 
-1. Connect the MSP432P401R microcontroller whit the ESP32-1, following the [ESP32-1 table pin layout](#PIN_LAYOUT)
+Connect the MSP432P401R microcontroller whit the ESP32-1 using F/F Jumper wires, following the [ESP32-1 table pin layout](#PIN_LAYOUT).
+
+   <img src="https://github.com/user-attachments/assets/1ccb45c1-9b9d-47cd-8836-0c30a3ca162b" width=40% height=40%>
 
 >[!IMPORTANT]
 >
@@ -165,8 +167,6 @@ To use the camera, press the S2 button (position right/top of the controller) to
 
 Pressing the S2 button will the switch again to the TANK mode, and so on.
 All this is possible thanks to the handler, that will listen for the interrupt of an action at any moment and send the message to the Esp32-1.
-
-<img src="https://github.com/user-attachments/assets/1ccb45c1-9b9d-47cd-8836-0c30a3ca162b" width=30% height=30%>
 
 Now you can use EXPLORER USS.0.1 to go everywhere you want, and see what your eyes could never!
 
