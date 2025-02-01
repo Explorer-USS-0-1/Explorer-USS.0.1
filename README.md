@@ -104,19 +104,15 @@ After printing all the files linked in the [**hardware requirements**](#REQUIERE
 
 9. Now is possible put any additional accessory or tool ( from our printfile folder or any custom-made one ).
 
+>[!IMPORTANT]
+>
+>**To power up everything the same way we did it, check out the [POWER SYSTEM MANAGEMENT](#POWER_SYSTEM_MANAGEMENT) section**
+
 #### JOYSTICK
 
 Connect the MSP432P401R microcontroller whit the ESP32-1 using F/F Jumper wires, following the [ESP32-1 table pin layout](#PIN_LAYOUT).
 
    <img src="https://github.com/user-attachments/assets/1ccb45c1-9b9d-47cd-8836-0c30a3ca162b" width=40% height=40%>
-
-
-
-
->[!IMPORTANT]
->
->**To power up everything the same way we did it, check out the [POWER SYSTEM MANAGEMENT](#POWER_SYSTEM_MANAGEMENT) section**
-
 
 
 ### Software setup
@@ -250,9 +246,22 @@ First thing first set up the IDE , for this purpose use [Code Composer Studio](h
 
 ## POWER_SYSTEM_MANAGEMENT
 
-The ESP32-CAM is directly powered by an independent powerbank.
+The power system of our rover it's composed by 4 modules:
+1. One 12 Volt 3.5 Ah module to power up the L298N drivers for DC motors. This was obtained putting in series 8 batteries of 1.5 Volt;
+2. A 9 Volt battery coonected to a step down volatge board  to power up the servomotors and the ESP32-2;
+3. A 5 Volt output powerbank to power up the ESP32-Cam ( we decided to do this because the camera drains a lot of power)
+4. A 5 volt output powerbank to power up the MSP432 and the connected ESP32-1. 
 
-The MSP-EXP432P401R is powered by an independent powerbank attached to it.
+The first 2 modules are powering up motors connected and controlled by the ESP32-2, so they have to share in common the ground. To do it, we placed the stepdown voltage board on a breadboard using the external channels, which are connected per row throughout the breadboard.
+In this way we made a row where the electricity output of the step down board was off, putting instaed the external 12 Volt module , and connecting in the parallel row the grounds from the ESP32-2, the L298N drivers and from the servomotors. In the other external row we setted a 5V electricity output so we could power up the ESP32-2 trough the VIN pin and the 2 servomotors ( the ESP32 pinout is already described in the [*Communication*](#COMMUNICATION) section).
+
+Table 4: Rover power system management  
+| **DC motors**       | **Servo motors** | **Stepdown board**      |
+|---------------------|------------------|-------------------------|
+| Power               | -                | 12V - 3.5A (output off) |
+| GND                 | -                | GND                     |          
+| -                   | Power            | 5V  (output on)         |
+| -                   | GND              | GND                     |
 
 ## Link to powerpoint and Youtube video
 - Youtube https://youtu.be/4N75zm8ps9I
