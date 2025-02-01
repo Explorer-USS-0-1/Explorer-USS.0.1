@@ -293,7 +293,7 @@ The last drawback was the limited budget.
 
 ## TEAM MEMBERS
 
-The project was a developed in a team and the code was divided into many different areas (Rover, Communications, Graphics, Hardware, ...); each member focused therefore only on certain aspects of the project.
+The project was developed in a team and the code was divided into many different areas (Rover, Communications, Graphics, Hardware, ...); each member focused therefore only on certain aspects of the project.
 
 - Riccardo Ferro (Leader)
   - Contributed mainly to the creation of the physical part of the rover, desining the layout of the chassis, organizing the power system and setting up all the connections of the rover. He also contributed a lot to write the ESP32-2 (for motor control) and also the ESP32-1 communication part about the ESP-NOW protocol. He also setted-up the ESP-32 Camera.
