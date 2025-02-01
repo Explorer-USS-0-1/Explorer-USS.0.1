@@ -248,7 +248,7 @@ First thing first set up the IDE , for this purpose use [Code Composer Studio](h
 ## POWER_SYSTEM_MANAGEMENT
 
 The power system of our rover it's composed by 4 modules:
-1. One 12 Volt 3.5 Ah module to power up the L298N drivers for DC motors. This was obtained by putting in series 8 batteries of 1.5 Volt;
+1. A 12 Volt 3.5 Ah module to power up the L298N drivers for DC motors. This was obtained by putting in series 8 batteries of 1.5 Volt;
 2. A 9 Volt battery connected to a step down volatge board  to power up the servomotors and the ESP32-2;
 3. A 5 Volt output powerbank to power up the ESP32-Cam ( we decided to do this because the camera drains a lot of power)
 4. A 5 volt output powerbank to power up the MSP432 and the connected ESP32-1. 
