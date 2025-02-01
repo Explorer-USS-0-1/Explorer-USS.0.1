@@ -255,7 +255,7 @@ The power system of our rover it's composed by 4 modules:
 The first 2 modules are powering up motors connected and controlled by the ESP32-2, so they have to share in common the ground. To do it, we placed the stepdown voltage board on a breadboard using the external channels, which are connected per row throughout the breadboard.
 In this way we made a row where the electricity output of the step down board was off, putting instaed the external 12 Volt module , and connecting in the parallel row the grounds from the ESP32-2, the L298N drivers and from the servomotors. In the other external row we setted a 5V electricity output so we could power up the ESP32-2 trough the VIN pin and the 2 servomotors ( the ESP32 pinout is already described in the [*Communication*](#COMMUNICATION) section).
 
-<img src="https://github.com/user-attachments/assets/79885017-e6bd-48d6-806f-7ef1022e6a69" width=30% height=30%>
+<img src="https://github.com/user-attachments/assets/79885017-e6bd-48d6-806f-7ef1022e6a69" width=50% height=50%>
 
 Table 4: Rover power system management  
 | **DC motors**       | **Servo motors** | **Stepdown board**      |
