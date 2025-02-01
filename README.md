@@ -283,7 +283,7 @@ The last drawback was the limited budget.
 ## FUTURE IMPROVEMENTS
 
 - Rebuilding the power system, using only a rechargable Lipo battery to power every part of the rover;
-- Upgrading the quality of the sensors and motors and of the camera;
+- Upgrading the quality of the sensors, of the motors and of the camera;
 - Using only 2 ESP's, one for the controller and one for the movement;
 - Implementing an automated movement system using infrared sensors and algorithms;
 - Implementing an object detection project using the camera;
