@@ -269,7 +269,7 @@ Table 4: Rover power system management
 - Youtube https://youtu.be/4N75zm8ps9I
 - Powerpoint
 
-## Issues and drawbacks faced during the project.
+## ISSUES.
 
 In this section we want to explain the major difficulties encountered during the project
 
@@ -278,6 +278,12 @@ One of the main drawback was using the MSP432 as a controller. In fact we notice
 Another problem was the lack of knowledge in the field of electronic engeniering. In fact we had no prior knowledge about the hardware and power management parts, so we had to study from zero how these worked.
 
 The last drawback was the limited budget.
+
+## FUTURE IMPROVEMENTS
+
+-
+-
+-
 
 ## TEAM MEMBERS
 
@@ -290,10 +296,10 @@ The project was a developed in a team and the code was divided into many differe
   - Contributed mainly to setup the ESP32-2 connection of the rover, to write the code of the ESP32-2 and ESP32-1 and also of the UART connection between the MSP432 and ESP32-1;
 
 - Dennis
-  -   
+  - Write what you did bc i dont know how you divided the work in the group
 
 - Tiago Silva
-  - 
+  - Write what you did bc i dont know how you divided the work in the group
 
 
 
