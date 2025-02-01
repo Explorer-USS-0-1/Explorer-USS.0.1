@@ -295,7 +295,7 @@ The project was a developed in a team and the code was divided into many differe
 - Henrique Garcia -->correct the names if i write them wrong
   - Contributed mainly to setup the ESP32-2 connection of the rover, to write the code of the ESP32-2 and ESP32-1 and also of the UART connection between the MSP432 and ESP32-1;
 
-- Dennis
+- Dennis Alberti
   - Write what you did bc i dont know how you divided the work in the group
 
 - Tiago Silva
