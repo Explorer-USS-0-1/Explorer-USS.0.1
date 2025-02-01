@@ -81,6 +81,7 @@ The hardware setup requires time and planning, because **all the structural part
 
 After printing all the files linked in the [**hardware requirements**](#REQUIEREMENTS) section ( or any other file in the [Rover_chassis_and_tools_printfile](https://github.com/Dennis-Alberti/IoT-project/tree/main/Rover_chassis_and_tools_printfiles) folder), you can start build up the chassis in this order:
 1. The track frames (whit the cogs in them), and put the DC motors in them;
+ 
 ![Screenshot 2025-01-31 171718](https://github.com/user-attachments/assets/a3ed375e-4350-420f-856f-41f0282823ee)
 
 2. Put the track frames on the baseframe, using screws and bolts to secure the 2 parts, and then put the L298N driver holders in the holes of the base (they should perfectly fit);
