@@ -94,7 +94,7 @@ After printing all the files linked in the [**hardware requirements**](#REQUIERE
     
 5. Close the chassis whit the rover top frame, then put the tracks in place;
 6. Put inside the ESP32-Cam holder the ESP32-Cam, and then build up the "trurret" structure with the servomotors;
-7. Connect to the Esp32-2 the servomotors;
+7. Connect to the Esp32-2 the servomotors (following the same table of the point 4);
 8. Now is possible put any additional accessory or tool ( from our printfile folder or any custom-made one ).
 
 #### JOYSTICK
