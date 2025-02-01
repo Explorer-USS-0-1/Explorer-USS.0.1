@@ -202,7 +202,7 @@ This setup ensures efficient and reliable communication between the MSP432 and E
 
 
  Table 2: ESP32 connected to DC motors and servo motors
-| **ESP32 Pin** | **DC motors**       | **Servo motors** | **Distribuition power** |
+| **ESP32 Pin** | **DC motors**       | **Servo motors** | **Power System**        |
 |---------------|---------------------|------------------|-------------------------|
 | 21            | Motor1 Pin1         | -                | -                       |
 | 33            | Motor1 Pin2         | -                | -                       |
