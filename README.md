@@ -51,13 +51,13 @@ To build and use this project, you need the following hardware:
 - A lot of screws and bolts
 - 1 Usb-C cable
 - PLA of two different colors ( one for tracks, one for everything else)
-
+<p align="center">
   <img src="https://github.com/user-attachments/assets/b9918c82-8b12-4716-a93a-99824b7287e7" width=15% height=15%>
 
   <img src="https://github.com/user-attachments/assets/5cdeec9a-8a6c-414c-9cd5-5fc2740a3cf2" width=30% height=30%>
 
   <img src="https://github.com/user-attachments/assets/39ba9576-ec70-47a5-b851-bb9a8926c996" width=20% height=20%>
-
+</p>
 
 
 #### Software
@@ -83,25 +83,25 @@ The hardware setup requires time and planning, because **all the structural part
 
 After printing all the files linked in the [**hardware requirements**](#REQUIEREMENTS) section ( or any other file in the [Rover_chassis_and_tools_printfile](https://github.com/Dennis-Alberti/IoT-project/tree/main/Rover_chassis_and_tools_printfiles) folder), you can start build up the chassis in this order:
 1. Build the track frames (whit the cogs), and put the DC motors in them;
- 
+   <p align="center">
       <img src="https://github.com/user-attachments/assets/a3ed375e-4350-420f-856f-41f0282823ee" width=50% height=50%>  
 
 2. Put the track frames on the baseframe, using screws and bolts to secure the 2 parts, and then put the L298N driver holders in the holes of the base (they should perfectly fit);
 3. Use screw and bolts to secure the L298N divers to their holder frames; also connect the motors to the drivers and be sure that the opposing engines have the color order of the cables reversed. At the same time be sure that the motors sharing the track frame have the same cables color order;
-
+    <p align="center">
       <img src="https://github.com/user-attachments/assets/0adfb10b-93e5-46bb-99fb-dd0abeab3f99" width=40% height=40%>  
-
+    </p>
 4. Use the F/F jumper wires to connect all the motor speed pins to the ESP32-2 (displayed in the [**PIN LAYOUT**](#PIN_LAYOUT) section, ESP32-2 table);
 5. Close the chassis whit the rover top frame, then put the tracks in place;
 6. Put inside the ESP32-Cam holder the ESP32-Cam, and then build up the "trurret" structure with the servomotors;
-
+    <p align="center">
       <img src="https://github.com/user-attachments/assets/d7ae5354-3afa-43f3-bd1f-aad0ffc31e94" width=30% height=30%>
-
+    </p>
 8. Mount on the rover chassis the "turret" and connect to the Esp32-2 the servomotors (following the same table of the point 4);
-
+    <p align="center">
       <img src="https://github.com/user-attachments/assets/8f971599-abff-492b-ba06-9f16f164475b" width=40% height=40%> 
       <img src="https://github.com/user-attachments/assets/cd103219-1910-41a4-b3d5-4605beed4cd2" width=30% height=30%> 
-
+    </p>
 9. Now is possible put any additional accessory or tool ( from our printfile folder or any custom-made one ).
 
 >[!IMPORTANT]
@@ -111,9 +111,9 @@ After printing all the files linked in the [**hardware requirements**](#REQUIERE
 #### JOYSTICK
 
 Connect the MSP432P401R microcontroller whit the ESP32-1 using F/F Jumper wires, following the [ESP32-1 table pin layout](#PIN_LAYOUT).
-
+  <p align="center">
    <img src="https://github.com/user-attachments/assets/1ccb45c1-9b9d-47cd-8836-0c30a3ca162b" width=40% height=40%>
-
+  </p>
 
 ### Software setup
 
