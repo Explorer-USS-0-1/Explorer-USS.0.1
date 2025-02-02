@@ -73,7 +73,7 @@ To build and use this project, you need the following hardware:
 
 ### Hardware setup
 
-The hardware setup requires time and planning, because **all the structural part** of the rover are **3D printed**.
+The hardware setup requires time and planning, because **all the structural part** of the rover are **3D printed**. We decided to do this to have a light but very strong and flexible structure.
 
 >[!Note]
 >
