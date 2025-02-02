@@ -1,7 +1,7 @@
 # <p align="center"> EXPLORER USS.0.1 </p>
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/65f4ffe8-abba-4ce2-b804-021d666b2570" width=50% height=50%> 
+<img src="https://github.com/user-attachments/assets/65f4ffe8-abba-4ce2-b804-021d666b2570" width=90% height=90%> 
 </p>
 
 
