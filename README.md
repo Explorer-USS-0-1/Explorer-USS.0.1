@@ -148,17 +148,17 @@ Once you have ensured the connection between the 2 ESP32 (see [COMMUNICATION](#C
 ## HOW TO USE
 
 The MSP432 code put in action the rover. The initial state shows a white car and the phrase "Welcome Back !". 
-
-<img src="https://github.com/user-attachments/assets/3f374e63-f392-430f-9573-3f1e41f39e16" width=30% height=30%>
-
+<p align="center">
+<img src="https://github.com/user-attachments/assets/3f374e63-f392-430f-9573-3f1e41f39e16" width=50% height=50%>
+</p>
 To start moving the tank, press the S3 button (position right/bottom of the controller), that will put the joystick in TANK mode, displaying the current state on the screen. Now you can move the rover using the joystick.
 * UP: move the rover forward.
 * DOWN: move the rover backward.
 * RIGHT: move the rover right.
 * LEFT: move the rover left
-  
-<img src="https://github.com/user-attachments/assets/8842cbce-7701-402d-b01e-eaa041b66429" width=30% height=30%>
-
+<p align="center"> 
+<img src="https://github.com/user-attachments/assets/8842cbce-7701-402d-b01e-eaa041b66429" width=50% height=50%>
+</p>
 To use the camera, press the S2 button (position right/top of the controller) to switch that will put the joystick in CAMERA mode, and use the joystick to point in the wanted direction. 
 * UP: move the camera up.
 * DOWN: move the camera down.
@@ -255,9 +255,9 @@ The power system of our rover it's composed by 4 modules:
 
 The first 2 modules are powering up motors connected and controlled by the ESP32-2, so they have to share in common the ground. To do it, we placed the stepdown voltage board on a breadboard using the external channels, which are connected per row throughout the breadboard.
 In this way we made a row where the electricity output of the step down board was off, putting instaed the external 12 Volt module , and connecting in the parallel row the grounds from the ESP32-2, from the L298N drivers and from the servomotors. In the other external row we setted a 5V electricity output so we could power up the ESP32-2 trough the VIN pin and the 2 servomotors ( the ESP32 pinout is already described in the [*Communication*](#COMMUNICATION) section).
-
+<p align="center">
 <img src="https://github.com/user-attachments/assets/79885017-e6bd-48d6-806f-7ef1022e6a69" width=50% height=50%>
-
+</p>
 Table 4: Rover power system management  
 | **DC motors**       | **Servo motors** | **Stepdown board**      |
 |---------------------|------------------|-------------------------|
