@@ -275,11 +275,11 @@ Table 4: Rover power system management
 
 In this section we want to explain the major difficulties encountered during the project
 
-One of the main drawback was using the MSP432 as a controller. In fact we noticed that the command input had some lag, approximately 500ms. Also using the MSP432 boosterpack limited the possibility to have simultameous movement of camera and rover. But we decided to use the board anyway to challenge us into understanding more complicated boards than an Arduino.
+One of the main drawback was using the MSP432 as a controller. In fact we noticed that the command input had some lag, approximately 500ms. This was also due to the UART connection between the MSP432 and ESP32, followed by the connection via the ESP-NOW protocol. Also using the MSP432 boosterpack limited the possibility to have simultameous movement of camera and rover. But we decided to use the board anyway to challenge us into understanding more complicated boards than an Arduino.
 
 Another problem was the lack of knowledge in the field of electronic engeniering. In fact we had no prior knowledge about the hardware and power management parts, so we had to study from zero how these worked.
 
-The last drawback was the limited budget.
+The last drawback was the limited budget, that forced us to use low-cost hardware.
 
 ## FUTURE IMPROVEMENTS
 
