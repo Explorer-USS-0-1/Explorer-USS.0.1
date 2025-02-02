@@ -286,11 +286,11 @@ The last drawback was the limited budget.
 - Rebuilding the power system, using only a rechargable Lipo battery to power every part of the rover;
 - Upgrading the quality of the sensors, of the motors and of the camera;
 - Using only 2 ESP's, one for the controller and one for the movement;
+- Implementing simultaneous movement of camera and rover, and also freer movements;
 - Implementing an automated movement system using ultrasonic sensors and algorithms;
 - Implementing an object detection project using the camera;
 - Implementing an automated garage for the rover, working as an homestation where it can recharge;
-- Implementing some led light, to use the rover also in darker places;
-- 
+- Implementing some led light, to use the rover also in darker places.
 
 ## TEAM MEMBERS
 
