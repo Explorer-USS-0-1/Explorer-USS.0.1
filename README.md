@@ -1,9 +1,11 @@
-# Explorer USS.0.1
-Here we can put whatever we make.
+<p align="center">
+# EXPLORER USS.0.1
+</p>  
+//Here we can put whatever we make.
 
-We are gonna put here also all the details of the project, to reference check the projects of the previous years, like this one: https://github.com/Clown-Machine/ClawMachine?tab=readme-ov-file
+//We are gonna put here also all the details of the project, to reference check the projects of the previous years, like this one: https://github.com/Clown-Machine/ClawMachine?tab=readme-ov-file
 
-So we have to say a lot of things also about how to vreate and build the project.
+//So we have to say a lot of things also about how to vreate and build the project.
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/65f4ffe8-abba-4ce2-b804-021d666b2570" width=50% height=50%> 
