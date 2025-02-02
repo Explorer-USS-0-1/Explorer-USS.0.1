@@ -202,7 +202,7 @@ void setup() {
 
   //Here we initialize the ESP-NOW protocol
   if (esp_now_init() != ESP_OK) {
-    Serial.println("Error initializing ESP-NOW");
+    //Serial.println("Error initializing ESP-NOW");
     return;
   }
   
