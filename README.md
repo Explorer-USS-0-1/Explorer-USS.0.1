@@ -258,6 +258,7 @@ In this way we made a row where the electricity output of the step down board wa
 <p align="center">
 <img src="https://github.com/user-attachments/assets/79885017-e6bd-48d6-806f-7ef1022e6a69" width=50% height=50%>
 </p>
+
 Table 4: Rover power system management  
 | **DC motors**       | **Servo motors** | **Stepdown board**      |
 |---------------------|------------------|-------------------------|
