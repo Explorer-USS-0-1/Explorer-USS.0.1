@@ -5,6 +5,8 @@ We are gonna put here also all the details of the project, to reference check th
 
 So we have to say a lot of things also about how to vreate and build the project.
 
+<img src="https://github.com/user-attachments/assets/cd103219-1910-41a4-b3d5-4605beed4cd2" width=100% height=100%> 
+
 ==========================================================================
 
 This project tries to create and learn how a exploration rover can be, how can be built and what we can do with it. We liked the idea to do something that could move everywhere, on every type of soil and very far away, so we projected and created our personal rover from scratch.
