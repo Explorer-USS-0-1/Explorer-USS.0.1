@@ -5,7 +5,7 @@ We are gonna put here also all the details of the project, to reference check th
 
 So we have to say a lot of things also about how to vreate and build the project.
 
-<img src="https://github.com/user-attachments/assets/65f4ffe8-abba-4ce2-b804-021d666b2570" width=100% height=40%> 
+<img src="https://github.com/user-attachments/assets/65f4ffe8-abba-4ce2-b804-021d666b2570" width=50% height=50%> 
 
 ==========================================================================
 
