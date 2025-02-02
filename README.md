@@ -300,8 +300,8 @@ The project was developed in a team and the code was divided into many different
 - Riccardo Ferro (Leader)
   - Contributed mainly to the creation of the physical part of the rover, desining the layout of the chassis, organizing the power system and setting up all the connections of the rover. He also contributed a lot to write the ESP32-2 (for motor control) and also the ESP32-1 communication part about the ESP-NOW protocol. He also setted-up the ESP-32 Camera.
 
-- Henrique Garcia -->correct the names if i write them wrong
-  - Contributed mainly to setup the ESP32-2 connection of the rover, to write the code of the ESP32-2 and ESP32-1 and also of the UART connection between the MSP432 and ESP32-1;
+- Henrique Graça
+  - Contributed mainly to: setup the ESP32-2 connection of the rover; write the code of the ESP32-2 and ESP32-1; UART connection between the MSP432 and ESP32-1. 
 
 - Dennis Alberti
   - Write what you did bc i dont know how you divided the work in the group
