@@ -4,6 +4,9 @@
 <img src="https://github.com/user-attachments/assets/65f4ffe8-abba-4ce2-b804-021d666b2570" width=50% height=50%> 
 </p>
 
+<p align="center">
+(this image is AI generated)
+</p>
 
 ===========================================================================
 
@@ -28,7 +31,7 @@ To build and use this project, you need the following hardware:
 - 1x [Educational BoosterPack MKII](https://www.ti.com/tool/BOOSTXL-EDUMKII)
 - 2x [Esp32-Wroom-32D](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf)
 - 1x [Esp32-CAM](https://media.digikey.com/pdf/Data%20Sheets/DFRobot%20PDFs/DFR0602_Web.pdf)
-- 4x DC Motors
+- 4x DC Motors (driving wheels)
 - 2x L298N motor's driver
 - 2x micro servomotor
 - A 12 volt 3.5 Amp powersource (for the motor controller board)
@@ -81,7 +84,7 @@ The hardware setup requires time and planning, because **all the structural part
 
 #### ROVER
 
-After printing all the files linked in the [**hardware requirements**](#REQUIEREMENTS) section ( or any other file in the [Rover_chassis_and_tools_printfile](https://github.com/Dennis-Alberti/IoT-project/tree/main/Rover_chassis_and_tools_printfiles) folder), you can start build up the chassis in this order:
+After printing all the files linked in the [**hardware requirements**](#REQUIREMENTS) section ( or any other file in the [Rover_chassis_and_tools_printfile](https://github.com/Dennis-Alberti/IoT-project/tree/main/Rover_chassis_and_tools_printfiles) folder), you can start build up the chassis in this order:
 1. Build the track frames (whit the cogs), and put the DC motors in them;
    <p align="center">
       <img src="https://github.com/user-attachments/assets/a3ed375e-4350-420f-856f-41f0282823ee" width=50% height=50%>  
@@ -93,7 +96,7 @@ After printing all the files linked in the [**hardware requirements**](#REQUIERE
     </p>
 4. Use the F/F jumper wires to connect all the motor speed pins to the ESP32-2 (displayed in the [**PIN LAYOUT**](#PIN_LAYOUT) section, ESP32-2 table);
 5. Close the chassis whit the rover top frame, then put the tracks in place;
-6. Put inside the ESP32-Cam holder the ESP32-Cam, and then build up the "trurret" structure with the servomotors;
+6. Put inside the ESP32-Cam holder the ESP32-Cam, and then build up the "turret" structure with the servomotors;
     <p align="center">
       <img src="https://github.com/user-attachments/assets/d7ae5354-3afa-43f3-bd1f-aad0ffc31e94" width=30% height=30%>
     </p>
@@ -137,11 +140,11 @@ Connect the MSP432P401R microcontroller whit the ESP32-1 using F/F Jumper wires,
 4. Upload and run the code.
 
 ##### Esp32-Cam Setup
-1. Connect the Esp-cam whit a computer.
+1. Connect the Esp-cam with a computer.
 2. Go to [`Rover/Final/EspSender.ino`](Rover/Esp32Cam) ,download all the files in the folder and create a folder with all of them inside.
 3. Open the CameraWebServerEsp32Cam.ino file with Arduino IDE. In the "const char *ssid" and "const char *password" variables (line 39 and 40 of the code) put the name and the password of the wi-fi you're going to use to host the webserver;
 4. Upload and run the code.
-5. Only for the firs time (or everytime you change the host wi-fi), you have to copy the IP ADRESS ,printed in output on the Serial monitor of your pc, and paste it on a browser tab. 
+5. Only for the first time (or everytime you change the host wi-fi), you have to copy the IP ADDRESS, printed in output on the Serial monitor of your pc, and paste it on a browser tab. 
 
 Once you have ensured the connection between the 2 ESP32 (see [COMMUNICATION](#COMMUNICATION) section to know how), and the webserver for the ESP32-CAM is working, you can start to use the rover.
    
@@ -163,7 +166,7 @@ To start moving the tank, press the S3 button (position right/bottom of the cont
 <img src="https://github.com/user-attachments/assets/8842cbce-7701-402d-b01e-eaa041b66429" width=50% height=50%>
 </p>
 
-To use the camera, press the S2 button (position right/top of the controller) to switch that will put the joystick in CAMERA mode, and use the joystick to point in the wanted direction. 
+To use the camera and thus entering CAMERA mode, press the S2 button (position right/top of the controller) and use the joystick to point in the desired direction. 
 * UP: move the camera up.
 * DOWN: move the camera down.
 * RIGHT: move the camera right.
@@ -177,7 +180,7 @@ Now you can use EXPLORER USS.0.1 to go everywhere you want, and see what your ey
 
 >[!Note]
 >
-> Is possible to test every part of the project separatley
+> Is possible to test every part of the project separatley, just go in the Tools folder and try whatever you want ( for the rover parts, you will need to implememt an external joystick for testing, but not the full one).
 
 ## COMMUNICATION
 
@@ -198,7 +201,7 @@ The UART is configured to use the **SMCLK (Sub-Main Clock)** for the following r
 
 This setup ensures efficient and reliable communication between the MSP432 and ESP1 while optimizing power consumption and resource allocation.
 
-## PIN_LAYOUT
+## PIN LAYOUT
 
  Table 1: ESP32 connected to MSP432
 | **ESP32 Pin** | **MSP432 Pin** |   
@@ -241,7 +244,7 @@ This setup ensures efficient and reliable communication between the MSP432 and E
 
 ## MSP432 DriverLib Setup
 
-First thing first set up the IDE , for this purpose use [Code Composer Studio](https://www.ti.com/tool/CCSTUDIO) Integrated Development Environment (IDE) and:
+First thing to perform is setting up the IDE. For this purpose use [Code Composer Studio](https://www.ti.com/tool/CCSTUDIO) Integrated Development Environment (IDE) and:
 - Create a new project, select the MSP432P401R board in the selection tab and give a name to the project.
 - Download and extract the [MSP432 DriverLib](https://www.ti.com/tool/download/SIMPLELINK-MSP432-SDK/3.40.01.02) and save in a reachable directory, then do the following action to setup the environment:
    
@@ -253,16 +256,16 @@ First thing first set up the IDE , for this purpose use [Code Composer Studio](h
 6. Click ARM Linker and File Search Path
 7. Add "simplelink_msp432p4_sdk_3_40_01_02/source/ti/devices/msp432p4xx/driverlib/ccs/msp432p4xx_driverlib.lib" to "Include library file..." window
 
-## POWER_SYSTEM_MANAGEMENT
+## POWER SYSTEM MANAGEMENT
 
 The power system of our rover it's composed by 4 modules:
 1. A 12 Volt 3.5 Ah module to power up the L298N drivers for DC motors. This was obtained by putting in series 8 batteries of 1.5 Volt;
 2. A 9 Volt battery connected to a step down volatge board  to power up the servomotors and the ESP32-2;
-3. A 5 Volt output powerbank to power up the ESP32-Cam ( we decided to do this because the camera drains a lot of power)
+3. A 5 Volt output powerbank to power up the ESP32-Cam (we decided to do this because the camera drains a lot of power);
 4. A 5 volt output powerbank to power up the MSP432 and the connected ESP32-1. 
 
 The first 2 modules are powering up motors connected and controlled by the ESP32-2, so they have to share in common the ground. To do it, we placed the stepdown voltage board on a breadboard using the external channels, which are connected per row throughout the breadboard.
-In this way we made a row where the electricity output of the step down board was off, putting instaed the external 12 Volt module , and connecting in the parallel row the grounds from the ESP32-2, from the L298N drivers and from the servomotors. In the other external row we setted a 5V electricity output so we could power up the ESP32-2 trough the VIN pin and the 2 servomotors ( the ESP32 pinout is already described in the [*Communication*](#COMMUNICATION) section).
+In this way we made a row where the electricity output of the step down board was off, putting instead the external 12 Volt module, and connecting in the parallel row the grounds from the ESP32-2, from the L298N drivers and from the servomotors. In the other external row we set a 5V electricity output so we could power up the ESP32-2 trough the VIN pin and the 2 servomotors (the ESP32 pinout is already described in the [*Communication*](#COMMUNICATION) section).
 <p align="center">
 <img src="https://github.com/user-attachments/assets/79885017-e6bd-48d6-806f-7ef1022e6a69" width=50% height=50%>
 </p>
@@ -281,11 +284,11 @@ Table 4: Rover power system management
 
 ## ISSUES.
 
-In this section we want to explain the major difficulties encountered during the project
+In this section we want to explain the major difficulties encountered during the project.
 
-One of the main drawback was using the MSP432 as a controller. In fact we noticed that the command input had some lag, approximately 500ms. This was also due to the UART connection between the MSP432 and ESP32, followed by the connection via the ESP-NOW protocol. Also using the MSP432 boosterpack limited the possibility to have simultameous movement of camera and rover. But we decided to use the board anyway to challenge us into understanding more complicated boards than an Arduino.
+One of the main drawbacks was using the MSP432 as a controller. In fact we noticed that the command input had some latency, approximately 500ms. This was also due to the UART connection between the MSP432 and ESP32, followed by the connection via the ESP-NOW protocol. Also using the MSP432 boosterpack limited the possibility to have simultameous movement of camera and rover. But we decided to use the board anyway to challenge us into understanding more complicated boards than Arduino.
 
-Another problem was the lack of knowledge in the field of electronic engeniering. In fact we had no prior knowledge about the hardware and power management parts, so we had to study from zero how these worked.
+Another problem was the lack of knowledge in the field of electronic engineering. In fact we had no prior knowledge about the hardware and power management parts, so we had to study from zero how these worked.
 
 The last drawback was the limited budget, that forced us to use low-cost hardware.
 
@@ -294,11 +297,13 @@ The last drawback was the limited budget, that forced us to use low-cost hardwar
 - Rebuilding the power system, using only a rechargable Lipo battery to power every part of the rover;
 - Upgrading the quality of the sensors, of the motors and of the camera;
 - Using only 2 ESP's, one for the controller and one for the movement;
-- Implementing simultaneous movement of camera and rover, and also freer movements;
+- Implementing simultaneous movement of camera and rover, and also have more freedom in the movements;
 - Implementing an automated movement system using ultrasonic sensors and algorithms;
 - Implementing an object detection project using the camera;
 - Implementing an automated garage for the rover, working as an homestation where it can recharge;
-- Implementing some led light, to use the rover also in darker places.
+- Implementing some led light, to use the rover also in darker places;
+- Implementing a more detayled interface on screen, by creating a menu screen to navigate through the different modes;
+- Implementing a timer to register inactivity from the user, causing the system to switch to a sleep mode.
 
 ## TEAM MEMBERS
 
@@ -314,7 +319,7 @@ The project was developed in a team and the code was divided into many different
   - Contributed mainly in the creation of the MSP432 code.
 
 - Tiago Silva
-  - Contributed mainly in the creation of the MSP432 code.
+  - Contributed mainly in the creation of the MSP432 code and was responsible for video editting of the project's showcase.
 
 
 
