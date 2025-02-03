@@ -94,7 +94,7 @@ After printing all the files linked in the [**hardware requirements**](#REQUIERE
     </p>
 4. Use the F/F jumper wires to connect all the motor speed pins to the ESP32-2 (displayed in the [**PIN LAYOUT**](#PIN_LAYOUT) section, ESP32-2 table);
 5. Close the chassis whit the rover top frame, then put the tracks in place;
-6. Put inside the ESP32-Cam holder the ESP32-Cam, and then build up the "trurret" structure with the servomotors;
+6. Put inside the ESP32-Cam holder the ESP32-Cam, and then build up the "turret" structure with the servomotors;
     <p align="center">
       <img src="https://github.com/user-attachments/assets/d7ae5354-3afa-43f3-bd1f-aad0ffc31e94" width=30% height=30%>
     </p>
