@@ -175,6 +175,11 @@ All this is possible thanks to the handler, that will listen for the interrupt o
 
 Now you can use EXPLORER USS.0.1 to go everywhere you want, and see what your eyes could never!
 
+>[!Note]
+>
+> Is possible to test every part of the project separatley:
+> -To test only the rover movement,  ((ADD ALL OF THEM))
+
 ## COMMUNICATION
 
 This project is divided into two modules: the **controller** and the **rover**. These modules are connected via ESP-NOW protocol using two ESP32 microcontrollers. All the information originates from the MSP432 microcontroller, which sends it to **ESP32-1**. ESP32-1 then transmits the data to **ESP32-2**, which interprets the messages and sends instructions to the DC motors and servo motors on the rover. The connection between the ESP's is done using the libraries <esp_now.h> and <WiFi.h> in Arduino IDE. 
