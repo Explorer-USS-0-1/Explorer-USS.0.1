@@ -138,7 +138,7 @@ Connect the MSP432P401R microcontroller whit the ESP32-1 using F/F Jumper wires,
 4. Upload and run the code.
 
 ##### Esp32-Cam Setup
-1. Connect the Esp-cam whit a computer.
+1. Connect the Esp-cam with a computer.
 2. Go to [`Rover/Final/EspSender.ino`](Rover/Esp32Cam) ,download all the files in the folder and create a folder with all of them inside.
 3. Open the CameraWebServerEsp32Cam.ino file with Arduino IDE. In the "const char *ssid" and "const char *password" variables (line 39 and 40 of the code) put the name and the password of the wi-fi you're going to use to host the webserver;
 4. Upload and run the code.
