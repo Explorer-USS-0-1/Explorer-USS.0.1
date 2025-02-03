@@ -75,6 +75,7 @@ To build and use this project, you need the following hardware:
 ## PROJECT LAYOUT
 
 '''bash
+
 ├───Rover
 │   ├───Esp32Cam
 │   ├───Final
@@ -107,6 +108,7 @@ To build and use this project, you need the following hardware:
     │   ├───LcdDriver
     │   └───targetConfigs
     └───Servomotors
+    
 '''bash
 
 ## SETUP
