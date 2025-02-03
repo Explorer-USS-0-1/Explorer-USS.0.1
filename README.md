@@ -84,7 +84,7 @@ The hardware setup requires time and planning, because **all the structural part
 
 #### ROVER
 
-After printing all the files linked in the [**hardware requirements**](#REQUIEREMENTS) section ( or any other file in the [Rover_chassis_and_tools_printfile](https://github.com/Dennis-Alberti/IoT-project/tree/main/Rover_chassis_and_tools_printfiles) folder), you can start build up the chassis in this order:
+After printing all the files linked in the [**hardware requirements**](#REQUIREMENTS) section ( or any other file in the [Rover_chassis_and_tools_printfile](https://github.com/Dennis-Alberti/IoT-project/tree/main/Rover_chassis_and_tools_printfiles) folder), you can start build up the chassis in this order:
 1. Build the track frames (whit the cogs), and put the DC motors in them;
    <p align="center">
       <img src="https://github.com/user-attachments/assets/a3ed375e-4350-420f-856f-41f0282823ee" width=50% height=50%>  
@@ -201,7 +201,7 @@ The UART is configured to use the **SMCLK (Sub-Main Clock)** for the following r
 
 This setup ensures efficient and reliable communication between the MSP432 and ESP1 while optimizing power consumption and resource allocation.
 
-## PIN_LAYOUT
+## PIN LAYOUT
 
  Table 1: ESP32 connected to MSP432
 | **ESP32 Pin** | **MSP432 Pin** |   
@@ -256,7 +256,7 @@ First thing to perform is setting up the IDE. For this purpose use [Code Compose
 6. Click ARM Linker and File Search Path
 7. Add "simplelink_msp432p4_sdk_3_40_01_02/source/ti/devices/msp432p4xx/driverlib/ccs/msp432p4xx_driverlib.lib" to "Include library file..." window
 
-## POWER_SYSTEM_MANAGEMENT
+## POWER SYSTEM MANAGEMENT
 
 The power system of our rover it's composed by 4 modules:
 1. A 12 Volt 3.5 Ah module to power up the L298N drivers for DC motors. This was obtained by putting in series 8 batteries of 1.5 Volt;
