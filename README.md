@@ -314,7 +314,7 @@ The project was developed in a team and the code was divided into many different
   - Contributed mainly in the creation of the MSP432 code.
 
 - Tiago Silva
-  - Write what you did bc i dont know how you divided the work in the group
+  - Contributed mainly in the creation of the MSP432 code.
 
 
 
