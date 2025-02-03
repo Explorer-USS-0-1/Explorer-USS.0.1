@@ -177,8 +177,7 @@ Now you can use EXPLORER USS.0.1 to go everywhere you want, and see what your ey
 
 >[!Note]
 >
-> Is possible to test every part of the project separatley:
-> -To test only the rover movement,  ((ADD ALL OF THEM))
+> Is possible to test every part of the project separatley
 
 ## COMMUNICATION
 
