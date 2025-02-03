@@ -72,6 +72,41 @@ To build and use this project, you need the following hardware:
 >
 >The rover is designed to be customizable, our project is just an example.
 
+## PROJECT LAYOUT
+
+├───Rover
+│   ├───Esp32Cam
+│   ├───Final
+│   └───MSP + ESP FINAL
+│       ├───Debug
+│       │   └───LcdDriver
+│       ├───LcdDriver
+│       └───targetConfigs
+├───Rover_chassis_and_tools_printfiles
+└───Separate_testing_tools
+    ├───Car_Image_State_Machine
+    │   ├───Debug
+    │   │   └───LcdDriver
+    │   ├───LcdDriver
+    │   └───targetConfigs
+    ├───DC_Motors
+    ├───MSP_Tank_Final
+    │   ├───Debug
+    │   │   └───LcdDriver
+    │   ├───LcdDriver
+    │   └───targetConfigs
+    ├───MSP_Tank_Test
+    │   ├───Debug
+    │   │   └───LcdDriver
+    │   ├───LcdDriver
+    │   └───targetConfigs
+    ├───Push_buttons
+    │   ├───Debug
+    │   │   └───LcdDriver
+    │   ├───LcdDriver
+    │   └───targetConfigs
+    └───Servomotors
+
 ## SETUP
 
 ### Hardware setup
