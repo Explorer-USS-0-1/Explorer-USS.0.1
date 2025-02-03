@@ -4,7 +4,9 @@
 <img src="https://github.com/user-attachments/assets/65f4ffe8-abba-4ce2-b804-021d666b2570" width=50% height=50%> 
 </p>
 
+<p align="center">
 (this image is AI generated)
+</p>
 
 ===========================================================================
 
