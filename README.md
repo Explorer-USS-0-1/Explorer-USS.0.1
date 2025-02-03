@@ -29,7 +29,7 @@ To build and use this project, you need the following hardware:
 - 1x [Educational BoosterPack MKII](https://www.ti.com/tool/BOOSTXL-EDUMKII)
 - 2x [Esp32-Wroom-32D](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf)
 - 1x [Esp32-CAM](https://media.digikey.com/pdf/Data%20Sheets/DFRobot%20PDFs/DFR0602_Web.pdf)
-- 4x DC Motors
+- 4x DC Motors (driving wheels)
 - 2x L298N motor's driver
 - 2x micro servomotor
 - A 12 volt 3.5 Amp powersource (for the motor controller board)
@@ -242,7 +242,7 @@ This setup ensures efficient and reliable communication between the MSP432 and E
 
 ## MSP432 DriverLib Setup
 
-First thing first set up the IDE , for this purpose use [Code Composer Studio](https://www.ti.com/tool/CCSTUDIO) Integrated Development Environment (IDE) and:
+First thing to perform is setting up the IDE. For this purpose use [Code Composer Studio](https://www.ti.com/tool/CCSTUDIO) Integrated Development Environment (IDE) and:
 - Create a new project, select the MSP432P401R board in the selection tab and give a name to the project.
 - Download and extract the [MSP432 DriverLib](https://www.ti.com/tool/download/SIMPLELINK-MSP432-SDK/3.40.01.02) and save in a reachable directory, then do the following action to setup the environment:
    
@@ -259,11 +259,11 @@ First thing first set up the IDE , for this purpose use [Code Composer Studio](h
 The power system of our rover it's composed by 4 modules:
 1. A 12 Volt 3.5 Ah module to power up the L298N drivers for DC motors. This was obtained by putting in series 8 batteries of 1.5 Volt;
 2. A 9 Volt battery connected to a step down volatge board  to power up the servomotors and the ESP32-2;
-3. A 5 Volt output powerbank to power up the ESP32-Cam ( we decided to do this because the camera drains a lot of power)
+3. A 5 Volt output powerbank to power up the ESP32-Cam (we decided to do this because the camera drains a lot of power);
 4. A 5 volt output powerbank to power up the MSP432 and the connected ESP32-1. 
 
 The first 2 modules are powering up motors connected and controlled by the ESP32-2, so they have to share in common the ground. To do it, we placed the stepdown voltage board on a breadboard using the external channels, which are connected per row throughout the breadboard.
-In this way we made a row where the electricity output of the step down board was off, putting instaed the external 12 Volt module , and connecting in the parallel row the grounds from the ESP32-2, from the L298N drivers and from the servomotors. In the other external row we setted a 5V electricity output so we could power up the ESP32-2 trough the VIN pin and the 2 servomotors ( the ESP32 pinout is already described in the [*Communication*](#COMMUNICATION) section).
+In this way we made a row where the electricity output of the step down board was off, putting instead the external 12 Volt module, and connecting in the parallel row the grounds from the ESP32-2, from the L298N drivers and from the servomotors. In the other external row we set a 5V electricity output so we could power up the ESP32-2 trough the VIN pin and the 2 servomotors (the ESP32 pinout is already described in the [*Communication*](#COMMUNICATION) section).
 <p align="center">
 <img src="https://github.com/user-attachments/assets/79885017-e6bd-48d6-806f-7ef1022e6a69" width=50% height=50%>
 </p>
@@ -282,11 +282,11 @@ Table 4: Rover power system management
 
 ## ISSUES.
 
-In this section we want to explain the major difficulties encountered during the project
+In this section we want to explain the major difficulties encountered during the project.
 
-One of the main drawback was using the MSP432 as a controller. In fact we noticed that the command input had some lag, approximately 500ms. This was also due to the UART connection between the MSP432 and ESP32, followed by the connection via the ESP-NOW protocol. Also using the MSP432 boosterpack limited the possibility to have simultameous movement of camera and rover. But we decided to use the board anyway to challenge us into understanding more complicated boards than an Arduino.
+One of the main drawbacks was using the MSP432 as a controller. In fact we noticed that the command input had some latency, approximately 500ms. This was also due to the UART connection between the MSP432 and ESP32, followed by the connection via the ESP-NOW protocol. Also using the MSP432 boosterpack limited the possibility to have simultameous movement of camera and rover. But we decided to use the board anyway to challenge us into understanding more complicated boards than Arduino.
 
-Another problem was the lack of knowledge in the field of electronic engeniering. In fact we had no prior knowledge about the hardware and power management parts, so we had to study from zero how these worked.
+Another problem was the lack of knowledge in the field of electronic engineering. In fact we had no prior knowledge about the hardware and power management parts, so we had to study from zero how these worked.
 
 The last drawback was the limited budget, that forced us to use low-cost hardware.
 
@@ -317,7 +317,7 @@ The project was developed in a team and the code was divided into many different
   - Contributed mainly in the creation of the MSP432 code.
 
 - Tiago Silva
-  - Contributed mainly in the creation of the MSP432 code.
+  - Contributed mainly in the creation of the MSP432 code and was responsible for video editting of the project's showcase.
 
 
 
