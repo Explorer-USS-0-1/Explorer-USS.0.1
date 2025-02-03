@@ -148,17 +148,21 @@ Once you have ensured the connection between the 2 ESP32 (see [COMMUNICATION](#C
 ## HOW TO USE
 
 The MSP432 code put in action the rover. The initial state shows a white car and the phrase "Welcome Back !". 
+
 <p align="center">
 <img src="https://github.com/user-attachments/assets/3f374e63-f392-430f-9573-3f1e41f39e16" width=50% height=50%>
 </p>
+
 To start moving the tank, press the S3 button (position right/bottom of the controller), that will put the joystick in TANK mode, displaying the current state on the screen. Now you can move the rover using the joystick.
 * UP: move the rover forward.
 * DOWN: move the rover backward.
 * RIGHT: move the rover right.
 * LEFT: move the rover left
+
 <p align="center"> 
 <img src="https://github.com/user-attachments/assets/8842cbce-7701-402d-b01e-eaa041b66429" width=50% height=50%>
 </p>
+
 To use the camera, press the S2 button (position right/top of the controller) to switch that will put the joystick in CAMERA mode, and use the joystick to point in the wanted direction. 
 * UP: move the camera up.
 * DOWN: move the camera down.
