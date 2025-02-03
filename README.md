@@ -164,7 +164,7 @@ To start moving the tank, press the S3 button (position right/bottom of the cont
 <img src="https://github.com/user-attachments/assets/8842cbce-7701-402d-b01e-eaa041b66429" width=50% height=50%>
 </p>
 
-To use the camera, press the S2 button (position right/top of the controller) to switch that will put the joystick in CAMERA mode, and use the joystick to point in the wanted direction. 
+To use the camera and thus entering CAMERA mode, press the S2 button (position right/top of the controller) and use the joystick to point in the desired direction. 
 * UP: move the camera up.
 * DOWN: move the camera down.
 * RIGHT: move the camera right.
