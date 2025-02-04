@@ -5,7 +5,7 @@
 </p>
 
 
-=============================================================================
+===========================================================================
 
 The goal of this project is to create and learn how a exploration rover can be, how can be built and what we can do with it. We liked the idea to do something that could move everywhere, on every type of soil and very far away, so we designed and created our personal rover from scratch.
 
