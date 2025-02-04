@@ -319,8 +319,6 @@ Table 4: Rover power system management
 - Youtube https://youtu.be/4N75zm8ps9I
 - Powerpoint
 
->[!VIDEO](https://youtu.be/4N75zm8ps9I)
-
 ## ISSUES.
 
 In this section we want to explain the major difficulties encountered during the project.
