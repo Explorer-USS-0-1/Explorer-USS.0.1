@@ -28,13 +28,12 @@ volatile int button3PrevState = 0; // Previous state of Button2
 
 
 // Function prototypes
-void fn_IMAGE(void);
-void drawCar(void);
-//void startButtonInit(void);
-void ADC14_IRQHandler(void);
 void _graphicsInit();
 void _adcInit();
 void _hwInit();
+void drawCar(void);
+void fn_IMAGE(void);
+void ADC14_IRQHandler(void);
 
 // ----------------------------------- GENERAL INITS --------------------------------------
 
