@@ -338,7 +338,7 @@ The last drawback was the limited budget, that forced us to use low-cost hardwar
 - Implementing some led light, to use the rover also in darker places;
 - Implementing a more detayled interface on screen, by creating a menu screen to navigate through the different modes;
 - Implementing a timer to register inactivity from the user, causing the system to switch to a sleep mode;
-- Using the Pulse Wave Modulation to regulate the velocity that is transmitted to the driving wheels: slow, medium and high velocity, for example;
+- Using the Pulse Width Modulation to regulate the velocity that is transmitted to the driving wheels: slow, medium and high velocity, for example;
 - Optimize the code; make the code easier to read, more intuitive.
 
 ## TEAM MEMBERS
