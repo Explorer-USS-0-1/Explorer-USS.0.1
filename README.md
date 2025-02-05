@@ -212,7 +212,7 @@ Now you can use EXPLORER USS.0.1 to go everywhere you want, and see what your ey
 
 >[!Note]
 >
-> Is possible to test every part of the project separatley, just go in the in the separate_testing_tools folder, and try whatever you want (for the rover parts, you will need to implememt an external joystick for testing, but not the full one).
+> Is possible to test every part of the project separatley, just go in the in the [separate_testing_tools](/Separate_testing_tools) folder, and try whatever you want (for the rover parts, you will need to implememt an external joystick for testing, but not the full one).
 
 ## COMMUNICATION
 
