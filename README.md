@@ -344,7 +344,7 @@ The last drawback was the limited budget, that forced us to use low-cost hardwar
 The project was developed in a team and the code was divided into many different areas (Rover, Communications, Graphics, Hardware, ...); each member focused therefore only on certain aspects of the project.
 
 - Riccardo Ferro (Leader)
-  - Contributed mainly to the creation of the physical and hardware part of the rover. He designed the layout of the chassis, organized the power system and setted up all the connections of the rover. He also contributed a lot to write the code for motor control (ESP32-2) and also the code for the communication between ESP32-1 and ESP32-2 using the ESP-NOW protocol. He also did the ESP-32 Camera configuration. Finally he did the final code and documantation review
+  - Contributed mainly to the creation of the physical and hardware part of the rover. He designed the layout of the chassis, organized the power system and setted up all the connections of the rover. He also contributed a lot to write the code for motor control (ESP32-2) and also the code for the communication between ESP32-1 and ESP32-2 using the ESP-NOW protocol. He also did the ESP-32 Camera configuration and the final code and documantation review.
 
 - Henrique Graça
   - Contributed mainly to: setup the ESP32-2 connection of the rover; write the code of the ESP32-2 and ESP32-1; UART connection between the MSP432 and ESP32-1. 
