@@ -41,8 +41,5 @@ void resetCommandsCamera();
 void sendOnceTank(const char *message);
 void sendOnceCamera(const char *message);
 void sendAlternateMessage();
-void _graphicsInit();
-void _adcInit();
-void _hwInit();
 
 #endif /* FUNCTIONS_H_ */
