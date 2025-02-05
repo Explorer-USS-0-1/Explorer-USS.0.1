@@ -13,7 +13,7 @@ Maybe is not a professional rover, or a competitive one, but for sure with a ver
 
 >[!Note]
 >
->In the print file folder there are a lot of files, cause during the desing phase we scraped and redesinged a lot of time the rover prototype.
+>In the [printfile folder](/Rover_chassis_and_tools_printfiles) there are a lot of files, cause during the desing phase we scraped and redesinged a lot of time the rover prototype.
 
 
 ## REQUIREMENTS
