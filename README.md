@@ -218,7 +218,7 @@ Now you can use EXPLORER USS.0.1 to go everywhere you want, and see what your ey
 
 This project is divided into two modules: the **controller** and the **rover**. These modules are connected via ESP-NOW protocol using two ESP32 microcontrollers. All the information originates from the MSP432 microcontroller, which sends it to **ESP32-1**. ESP32-1 then transmits the data to **ESP32-2**, which interprets the messages and sends instructions to the DC motors and servo motors on the rover. The connection between the ESP's is done using the libraries <esp_now.h> and <WiFi.h> in Arduino IDE. 
 
-The decision to use the ESP-NOW protocol is due to the reliability, low energy consumption, high message transfer speed and maintaining the connection over long distances.
+The decision to use the ESP-NOW protocol is due to the reliability, low energy consumption, high message transfer speed and long range connection.
 
 >[!IMPORTANT]
 >
