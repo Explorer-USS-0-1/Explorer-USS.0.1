@@ -313,8 +313,8 @@ Table 4: Rover power system management
 | -                   | GND              | GND                     |
 
 ## Link to powerpoint and Youtube video
-- Youtube https://youtu.be/4N75zm8ps9I
-- Powerpoint
+- Youtube [video](https://youtu.be/4N75zm8ps9I)
+- Powerpoint [presentation](https://docs.google.com/presentation/d/1o49VAeFgKbm6rYsIu1tgTplBiTX86RdQqd6DO4X7Q_E/edit#slide=id.g32c789ec61a_1_0)
 
 ## ISSUES.
 
