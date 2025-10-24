@@ -112,7 +112,7 @@ The hardware setup requires time and planning, because **all the structural part
 
 >[!Note]
 >
->The prints of our project were made with 100% reciled PLA.
+>The prints of our project were made with 100% recicled PLA.
 
 #### ROVER
 
